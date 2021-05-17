@@ -8,5 +8,11 @@ ASR文档页
    :maxdepth: 2
    :caption: ASR IoT
 
-    快速入门<快速入门>
-    烧录工具<烧录工具>
+    ASR6601 硬件设计指南<硬件设计>
+    ASR6601 程序开发快速入门指南<快速入门>
+    ASR6601 AT命令说明<https://pan.baidu.com/s/1GTtJdonFFgJ8w0AKO2eRHw>
+    ASR6601 参考手册<https://pan.baidu.com/s/1dVdvuHYeJuwG_csAJdx6jA>
+    ASR6601 烧录工具使用说明<烧录工具>
+    ASR6601 参考板测试指南<参考板>
+    ASR6601 OTA 升级说明<空中升级>
+    ASR6601 测试报告<测试报告>

@@ -1,6 +1,6 @@
 ASR文档页
 =======================
-`English <https://create-readthedocs.readthedocs.io/en/latest/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/>`_
 
 这些是 ASR IoT 产品的文档。
 

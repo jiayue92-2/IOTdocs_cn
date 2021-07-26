@@ -23,7 +23,7 @@ author = 'ASR'
 master_doc = 'index'
 
 # The full version, including alpha/beta/rc tags
-release = '最新版'
+release = '最新版
 
 import recommonmark
 from recommonmark.transform import AutoStructify

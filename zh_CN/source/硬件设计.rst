@@ -15,9 +15,9 @@ ASR6601 硬件设计指南
 +-----------+-----------+----------+-----------------------------+---------------+---------------+
 | **型号**  | **Flash** | **SRAM** | **内核**                    | **封装**      | **频率**      |
 +===========+===========+==========+=============================+===============+===============+
-| ASR6601SE | 256 KB    | 64 KB    | 32-bit 48 MHz ARM Cortex-M4 | QFN68, 8*8 mm | 150 ~ 960 MHz |
+| ASR6601SE | 256 KB    | 64 KB    | 32-bit 48 MHz ARM STAR      | QFN68, 8*8 mm | 150 ~ 960 MHz |
 +-----------+-----------+----------+-----------------------------+---------------+---------------+
-| ASR6601CB | 128 KB    | 16 KB    | 32-bit 48 MHz ARM Cortex-M4 | QFN48, 6*6 mm | 150 ~ 960 MHz |
+| ASR6601CB | 128 KB    | 16 KB    | 32-bit 48 MHz ARM STAR      | QFN48, 6*6 mm | 150 ~ 960 MHz |
 +-----------+-----------+----------+-----------------------------+---------------+---------------+
 
 **版权公告**
@@ -61,7 +61,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 \1. 概述
 --------------
 
-ASR6601 是一款通用的 Sub-GHz 无线通讯 SoC 芯片, 该芯片集成了 Sub-GHz 射频收发器和 32 位的 RISC MCU。该芯片 Sub-GHz 射频收发器不仅支持 LoRa 调制，还支持 (G)FSK 和 G(MSK) 等调制方式。MCU 为 ARM Cortex M4，工作频率最大支持 48 MHz，支持 3 x I2C，1 x I2S，4 x UART，1 x LPUART，1 x SWD，3 x SPI，1 x 12-bit SAR ADC 和 1 x 12-bit DAC 等丰富的外设和接口。
+ASR6601 是一款通用的 Sub-GHz 无线通讯 SoC 芯片, 该芯片集成了 Sub-GHz 射频收发器和 32 位的 RISC MCU。该芯片 Sub-GHz 射频收发器不仅支持 LoRa 调制，还支持 (G)FSK 和 G(MSK) 等调制方式。CPU 为 ARM STAR，工作频率最大支持 48 MHz，支持 3 x I2C，1 x I2S，4 x UART，1 x LPUART，1 x SWD，3 x SPI，1 x 12-bit SAR ADC 和 1 x 12-bit DAC 等丰富的外设和接口。
 
 ASR6601 的频率覆盖 150 MHz-960 MHz 的连续频段，可以支持世界上主要的 Sub-GHz 的 ISM 频段。芯片中集成的高效 PA 使其最大发射功率搞到 22 dBm，接收电流为 4.6 mA，最大的灵敏达到 -148 dBm，Deep Sleep 模式下的休眠电流低至 1.6 uA，可以大大延长电池寿命，该芯片有 QFN48 和 QFN68 两种封装，两种封装大小分别为 6x6 mm 和 8x8 mm。ASR6601 上述特性使其适合超远距离、超低功耗和高性价比的 LPWAN 应用。
 
@@ -84,7 +84,7 @@ ASR6601 的频率覆盖 150 MHz-960 MHz 的连续频段，可以支持世界上�
 
 -  4 x GPtimer, 2 x Basic Timer, 2 x LP timer and 1 x Sys Ticker
 
--  48 MHz ARM Cortex-M4 CPU
+-  48 MHz ARM STAR CPU
 
 -  4-channel DMA engine x 2
 

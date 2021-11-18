@@ -13,6 +13,7 @@ ASR 文档页
     ASR6601 AT命令说明<https://pan.baidu.com/s/1cG9fNazlBXrf59puI6d0Pw>
     ASR6601 参考手册<https://pan.baidu.com/s/1li7yXPyADhRN4PdMcv0wew>
     ASR6601 烧录工具使用说明<烧录工具>
+    ASR6601 量产烧录工具使用说明<量产烧录工具>
     ASR6601 参考板测试指南<参考板>
     ASR6601 OTA 升级说明<空中升级>
     ASR6601 测试报告<测试报告>

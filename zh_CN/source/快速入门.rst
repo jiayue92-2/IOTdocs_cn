@@ -201,6 +201,7 @@ ASR6601 使用 Jlink 时需要连 4 根线，将上图中 1、7、9 和 20 脚�
 ~~~~~~~~~~~~~~
 
 可以联系 ASR 技术支持人员来获取，或者通过下方命令从 GitHub 上下载。
+
 \ ``git clone https://github.com/asrlora/asr_lora_6601.git``
 
 
@@ -287,6 +288,7 @@ SDK 中未提供 Keil 工程文件，可以运行示例程序中的 keil.bat 生
 ^^^^^^^^^^^^^^^^^^
 
 可以联系 ASR 技术支持人员来获取，或者通过下方命令从 GitHub 上下载。
+
 \ ``git clone https://github.com/asrlora/asr_lora_6601.git``
 
 

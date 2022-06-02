@@ -11,8 +11,8 @@ ASR 文档页
     ASR6601 硬件设计指南<硬件设计>
     ASR6601 程序开发快速入门指南<快速入门>
     ASR6601 射频开关使用指南<射频开关>
-    ASR6601 AT命令说明<https://pan.baidu.com/s/1cG9fNazlBXrf59puI6d0Pw>
-    ASR6601 参考手册<https://pan.baidu.com/s/1Y9D-9pne7HiROdxO_fEshg?pwd=1234>
+    ASR6601 AT命令说明<https://pan.baidu.com/s/16ac392CjtLEhlPuwxbKn8g?pwd=1234>
+    ASR6601 参考手册<https://pan.baidu.com/s/1CLGAigMVm978WTBW9JCr5Q?pwd=1234>
     ASR6601 烧录工具使用说明<烧录工具>
     ASR6601 量产烧录工具使用说明<量产烧录工具>
     ASR6601 参考板测试指南<参考板>

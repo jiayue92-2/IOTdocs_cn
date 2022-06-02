@@ -26,7 +26,7 @@ ASR6601 程序开发快速入门指南
 
 **版权公告**
 
-版权归 © 2021 翱捷科技股份有限公司所有。保留一切权利。未经翱捷科技股份有限公司的书面许可，不得以任何形式或手段复制、传播、转录、存储或翻译本文档的部分或所有内容。
+版权归 © 2022 翱捷科技股份有限公司所有。保留一切权利。未经翱捷科技股份有限公司的书面许可，不得以任何形式或手段复制、传播、转录、存储或翻译本文档的部分或所有内容。
 
 **商标声明**
 
@@ -46,7 +46,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
 地址：上海市浦东新区科苑路 399 号张江创新园 10 号楼 9 楼 邮编：201203
 
-官网：http://www.asrmicro.com/asrweb/
+官网：http://www.asrmicro.com/
 
 **文档修订历史**
 
@@ -65,6 +65,10 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 +----------+------------+---------------------------------------------------------+
 | 2021.03  | V1.2.0     | 修改第 3 章，简化编译过程。                             |
 +----------+------------+---------------------------------------------------------+
+| 2022.06  | V1.3.0     | 更新 ASR SDK 和 GCC 工具链的获取方式。                  |
++----------+------------+---------------------------------------------------------+
+
+
 
 1. 硬件准备
 -----------
@@ -196,7 +200,9 @@ ASR6601 使用 Jlink 时需要连 4 根线，将上图中 1、7、9 和 20 脚�
 2.2 获取 SDK
 ~~~~~~~~~~~~~~
 
-请联系 ASR 技术支持人员来获取。
+可以联系 ASR 技术支持人员来获取，或者通过下方命令从 GitHub 上下载。
+\ ``git clone https://github.com/asrlora/asr_lora_6601.git``
+
 
 2.3 生成 Keil 工程文件
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -206,11 +212,16 @@ SDK 中未提供 Keil 工程文件，可以运行示例程序中的 keil.bat 生
 2.4 配置 GCC 工具链
 ~~~~~~~~~~~~~~~~~~~~~
 
-(1) 找到 SDK 中 \\tools\\toolchain 目录下的工具链，并解压。
+(1) 通过下方链接下载 GNU Arm Embedded Toolchain，然后解压缩。
+    https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-win32.zip
+\
 
-(2) 按照 Keil 的用户指南文档设置 GCC 工具链，文档链接如下： https://www.keil.com/support/man/docs/uv4/uv4_gnucomp.htm
+(2) 按照 Keil 的用户指南文档设置 GCC 工具链，文档链接如下： 
+    https://www.keil.com/support/man/docs/uv4/uv4_gnucomp.htm
+\
 
-(3) 设置Tool Base Folder为刚解压后的目录，例如：D:\\ASR6601\_rel\\tools\\toolchain
+(3) 设置 Tool Base Folder 为刚解压后的目录，例如：D:\\ASR6601\_rel\\tools\\toolchain
+    \
 
 |image4|
 
@@ -268,14 +279,16 @@ SDK 中未提供 Keil 工程文件，可以运行示例程序中的 keil.bat 生
 
 (2) **安装相关程序**
 
-    打开 MSYS2，然后安装相关程序：\ ``pacman -S git vim make unzip python python-pip``
+    打开 MSYS2，然后安装相关程序：\ ``pacman -S git vim make unzip python python-pip wget``
 
     使用 pip 安装 pyserial：\ ``pip install pyserial configparser``
 
 3.1.2 SDK 获取
 ^^^^^^^^^^^^^^^^^^
 
-请联系 ASR 技术支持人员来获取。
+可以联系 ASR 技术支持人员来获取，或者通过下方命令从 GitHub 上下载。
+\ ``git clone https://github.com/asrlora/asr_lora_6601.git``
+
 
 3.2 软件编译与烧录
 ~~~~~~~~~~~~~~~~~~

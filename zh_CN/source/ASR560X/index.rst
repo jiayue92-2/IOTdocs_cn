@@ -31,10 +31,10 @@ ASR560X
 .. _演示工程: 演示工程/index.html
 
 .. |软件快速入门| image:: ../img/07.png
-.. _软件快速入门: esp8266+arduino/index.html
+.. _软件快速入门: 软件快速入门/index.html
 
 .. |常见问题| image:: ../img/08.png
-.. _常见问题: FAQ/index.html
+.. _常见问题: 常见问题/index.html
 
 .. |认证| image:: ../img/09.png
 .. _认证: 认证/index.html

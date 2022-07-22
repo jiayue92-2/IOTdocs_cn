@@ -6,15 +6,15 @@ ASR560X 系列最简参考设计
 1. ASR560X QFN48 最简参考设计
 --------------------------------------------------------
 
-.. figure:: ../../img/560X_Reference/图1-1.png
+.. figure:: ../../img/560X_参考设计/图1-1.png
     :align: center
     :scale: 30%
-    :alt: ASR560X QFN48 HV 最简参考设计 (click to enlarge)
+    :alt: ASR560X QFN48 HV 最简参考设计（点击放大）
 
-    ASR560X QFN48 HV 最简参考设计 (click to enlarge)
+    ASR560X QFN48 HV 最简参考设计（点击放大）
 
 
-.. figure:: ../../img/560X_Reference/图1-2.png
+.. figure:: ../../img/560X_参考设计/图1-2.png
     :align: center
     :scale: 30%
     :alt: ASR560X QFN48 LV 最简参考设计（点击放大）
@@ -106,7 +106,7 @@ ASR560X QFN48 LV 参考 BOM
 3. ASR560X QFN32 最简参考设计
 --------------------------------------------------------
 
-.. figure:: ../../img/560X_Reference/图1-3.png
+.. figure:: ../../img/560X_参考设计/图1-3.png
     :align: center
     :scale: 40%
     :alt: ASR560X QFN32 HV 最简参考设计（点击放大）
@@ -114,7 +114,7 @@ ASR560X QFN48 LV 参考 BOM
     ASR560X QFN32 HV 最简参考设计（点击放大）
 
 
-.. figure:: ../../img/560X_Reference/图1-4.png
+.. figure:: ../../img/560X_参考设计/图1-4.png
     :align: center
     :scale: 40%
     :alt: ASR560X QFN32 LV 最简参考设计（点击放大）

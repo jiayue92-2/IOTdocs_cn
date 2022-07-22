@@ -1,0 +1,616 @@
+.. role:: raw-latex(raw)
+   :format: latex
+..
+
+ASR560X 系列硬件设计指南
+===============================
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/Hardware-Reference/hardware_design.html>`_
+
+
+前言
+----
+
+**关于本文档**
+
+本文档为用户提供 ASR560X 系列蓝牙芯片的硬件设计指南，包括进行电路设计和 PCB 布局时需注意的事项以及对量产测试点的引出建议等。
+
+**产品型号**
+
+本文档适用于 ASR IoT 蓝牙芯片（560X 系列）。
+
++---------+----------------------------------------------------------------------------------------+----------+--------------+---------------------------------------------------------------------------------+
+| 型号    | 协议                                                                                   | 内核     | SiP Flash    | 功能                                                                            |
++=========+========================================================================================+==========+==============+=================================================================================+
+| ASR560X | BLE 5.1 full feature (compatible with 5.2)/BLE SIG Mesh/IEEE 802.15.4/2.4G Proprietary | ARM CM0+ | 1 MB/ 512 KB | AOA/AOD/Voice/IRTxRx/Quadrature Decoder/Keypad/5V UART/5V GPIO/Wi-Fi concurrent |
++---------+----------------------------------------------------------------------------------------+----------+--------------+---------------------------------------------------------------------------------+
+
+**版权公告**
+
+版权归 © 2022 翱捷科技股份有限公司所有。保留一切权利。未经翱捷科技股份有限公司的书面许可，不得以任何形式或手段复制、传播、转录、存储或翻译本文档的部分或所有内容。
+
+**商标声明**
+
+ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标。
+
+本文档提及的其他所有商标名称、商标和注册商标均属其各自所有人的财产，特此声明。
+
+**免责声明**
+
+翱捷科技股份有限公司对本文档内容不做任何形式的保证，并会对本文档内容或本文中介绍的产品进行不定期更新。
+
+本文档仅作为使用指导，本文的所有内容不构成任何形式的担保。本文档中的信息如有变更，恕不另行通知。
+
+本文档不负任何责任，包括使用本文档中的信息所产生的侵犯任何专有权行为的责任。
+
+**文档版本**
+
+======== ========== ==================================
+**日期** **版本号** **发布说明**
+======== ========== ==================================
+2022.07  V1.9.0     增加了第 6.4 节：P27/P28/P29 引脚说明。
+======== ========== ==================================
+
+
+1. 产品概述
+----------------------------
+
+ASR560X 是一系列高度集成的支持低功耗蓝牙 5.1 全功能（兼容 5.2）/IEEE 802.15.4/2.4G 专有多协议的单芯片（SoC）解决方案。部分型号还支持 BLE Mesh 组网（Relay、Proxy、LPNode 和 Friend 节点）。下方图表提供了详细的产品型号说明。
+
+.. raw:: html
+
+   <center>
+
+|image1|
+
+|image2|
+
+.. raw:: html
+
+   </center>
+
+关于 ASR560X SoC 芯片的详细信息，请参见 *ASR560X Series_Datasheet*\ 。
+
+2. 原理图设计
+----------------------------
+
+ASR560X 芯片采用单路电源供电设计，电源电压输入范围可达到 1.7 V ~ 5 V（宽压版），不同版本芯片的输入电压范围可能会有所不同，具体可参考第 1 章的图表。
+
+ASR560X 有 QFN32 和 QFN48 两种封装，区别只是 GPIO 引脚个数差异（从而 Pin Num. 不一样），其它电源/晶体/射频等功能引脚完全一样。
+
+.. important:: 本文档下述电路部分截图均以 **QFN32** 为例，QFN48 相同功能引脚的 Pin Num. 会有不同。
+
+2.1 外部电源输入 VBATA 脚
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ASR560X 芯片只有一个外部电源输入引脚 **VBATA**\ ，VBATB 为内部电源旁路引脚，Layout 时电容尽量靠近芯片对应引脚放置。
+
+注意，对于 ASR560X-XL 型号的蓝牙芯片（即 VBATA 输入电压\ **小于等于 3.6 V**\ ），VBATA 和 VBATB 引脚\ **必须短接**\ ，如下图。
+
+.. raw:: html
+
+   <center>
+
+|image3|
+
+外部电源输入引脚 VBATA（与 VBATB 短接）
+
+.. raw:: html
+
+   </center>
+
+而对于其他型号的 ASR560X 系列蓝牙芯片（即 VBATA 输入电压\ **会高于 3.6 V**\ ），VBATA 和 VBATB 引脚\ **不可以短接**\ ，如下图。
+
+.. raw:: html
+
+   <center>
+
+|image4|
+
+外部电源输入引脚 VBATA（与 VBATB 不短接）
+
+.. raw:: html
+
+   </center>
+
+
+2.2 内部电源旁路引脚
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ASR560X 芯片有三个内部电源旁路引脚，只需要外接电容即可，无需和其它电源相连，具体电容值见下图。
+
+Layout 时电容尽量靠近芯片对应引脚放置。
+
+.. raw:: html
+
+   <center>
+
+|image5|
+
+三个内部电源旁路引脚
+
+.. raw:: html
+
+   </center>
+
+
+2.3 内部 DCDC 电源
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ASR560X 芯片内置 DCDC 电源控制器，VDCOUT 为内部 DCDC 电源输出引脚，供给芯片内部其它电路使用，L1 为 4.7 μH DCDC 电感（EVB 上选用的是 MURATA LQH2HPN4R7MJRL），需选用持续电流大于 600 mA 的电源专用电感，其 DC 电阻要小于 200 mΩ。
+
+.. note:: 如果是类似 USB DONGLE 之类的非电池供电应用场景，对功耗没有什么要求的情况下，可以省去 L1 器件以节约成本和 PCB 面积，此时 VDCOUT 切换为内部 LDO 供电（需要软件配置）。
+
+.. raw:: html
+
+   <center>
+
+|image6|
+
+芯片内部 DCDC 外部引脚接法
+
+.. raw:: html
+
+   </center>
+
+
+Layout 时电感和电容尽量靠近芯片对应引脚放置，DCDC 电感下方表层净空，需要注意 \ **VSSD** PIN 脚是内部 DCDC 电源的地引脚，需要单点接地，不要直接和芯片下方 EPAD 连接，防止噪声干扰，如下图所示。
+
+.. raw:: html
+
+   <center>
+
+|image7|
+
+芯片内部 DCDC 外部引脚接法
+
+.. raw:: html
+
+   </center>
+
+
+
+2.4 内部各电源模块供电输入引脚
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+VCCRFA/VCCRFB/VCCBB 是芯片内部各功能模块的电源输入引脚，该电源来自内部 DCDC 产生的 VDCOUT 电压。
+
+Layout 时每一个 PIN 就近摆放一个电容。
+
+.. raw:: html
+
+   <center>
+
+|image8|
+
+VDCOUT 电源接法
+
+.. raw:: html
+
+   </center>
+
+
+2.5 晶体部分
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+主晶体选型规格建议：16 MHz (或 32 MHz) /10 ppm/9 pF，EVB 上料号为 E3FB16E007900E，品牌 HOSONIC。
+
+32.768 KHz 晶体是可选的，ASR560X 芯片内部可通过 RC 产生 32.768 KHz 时钟，通过软件校准精度在 ±200 ppm 内；在应用场景中，如果对精度要求高（比如 ±20 ppm），则可选择外部 RTC 晶体，如 EVB 上的型号是 ETST00327000KE，品牌 HOSONIC。
+
+.. raw:: html
+
+   <center>
+
+|image9|
+
+晶体电路
+
+.. raw:: html
+
+   </center>
+
+.. attention:: 针对精度要求较高或者使用条件比较苛刻的应用场景，建议使用外部 RTC 晶体。如果使用芯片内部的 RC 32.768 KHz 时钟，仍需预留外部 RTC 晶体位置，且 XO32KI 引脚（RTC_CLK）不能浮空，需要通过 0R 电阻短接到 GND。
+
+Layout时注意晶体下方表层净空，晶体走线下方不要有其他线交叉，如下图所示。
+
+.. raw:: html
+
+   <center>
+
+|image10|
+
+晶体走线示意图
+
+.. raw:: html
+
+   </center>
+
+
+2.6 CX 旁路电容
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CX1 和 CX2 为芯片内部电荷泵旁路引脚，需要就近 PIN 脚外接一个 0.1 μF 电容。
+
+.. raw:: html
+
+   <center>
+
+|image11|
+
+CX 旁路电容
+
+.. raw:: html
+
+   </center>
+
+
+2.7 RESET 引脚
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+芯片的 RESET 引脚内部自带上拉，芯片正常上电后内部自动拉高，也可以由外部上位机控制，如果不需要外部控制，建议设计时保留测点。
+
+.. raw:: html
+
+   <center>
+
+|image12|
+
+RESET 引脚
+
+.. raw:: html
+
+   </center>
+
+
+
+3. 射频前端设计
+----------------------------
+
+ASR560X 芯片 RF PIN 前端需要一个 π 型网络，用于谐波抑制，如果有板载天线还需要预留一个 π 型网络做天线匹配。
+
+需要注意，**QFN32 和 QFN48 两种封装的前级滤波电路匹配略有差异**，具体请参考下图。LC 的物料型号是在 ASR EVB 上调试的结果，客户实际应用时，因 PCB 设计不同可能需要微调。
+
+3.1 QFN32 匹配电路
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+   <center>
+
+|image13|
+
+.. raw:: html
+
+   </center>
+
+3.2 QFN48 匹配电路
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+   <center>
+
+|image14|
+
+.. raw:: html
+
+   </center>
+
+3.3 匹配电路走线
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Layout 时需注意匹配电路需尽量靠近芯片 RF 引脚，RF 走线尽量短且需要 50 欧阻抗控制。
+
+.. raw:: html
+
+   <center>
+
+|image15|
+
+.. raw:: html
+
+   </center>
+
+
+
+4. MIC 电路设计
+----------------------------
+
+ASR560X 支持差分和单端两种常用 MIC 接法，电路设计时需要注意以下两点：
+
+\1. T 型 RC 滤波电路，需要靠近 MIC 电源输入 PIN 脚摆放。
+
+\2. 无论是单端还是差分 MIC 器件，MIC_IN/IP 信号线都要按照差分走线走到 MIC 引脚端，注意隔离保护，接单端 MIC 时，MIC_IN 就近 MIC 端电容接地，如下图所示。
+
+.. raw:: html
+
+   <center>
+
+|image16|
+
+MIC 电路
+
+.. raw:: html
+
+   </center>
+
+如果对 MIC 噪声要求较高，还可以单独靠近 MIC 加一颗 LDO 以改善电源噪声，LDO 使能端用 GPIO 控制，以便 sleep 时关断 LDO。
+
+.. raw:: html
+
+   <center>
+
+|image17|
+
+MIC 电路（外部 LDO 供电）
+
+.. raw:: html
+
+   </center>
+
+当使用 MIC 功能时，在芯片 VMICTM 引脚旁就近放置一颗 470 nF 的滤波电容。
+
+.. raw:: html
+
+   <center>
+
+|image18|
+
+VMICTM 引脚示意图
+
+.. raw:: html
+
+   </center>
+
+.. attention::
+    \1. VMICTM（PIN3 引脚）：当用 MIC 功能时，C16 需要贴 470 nF，需要 R7 10K 电阻下拉；当不用 MIC 功能时，C16 可以去掉，需要 R7 10K 电阻下拉。 
+
+    \2. VMICTM/MICIP/MICIN 用作 GPIO 功能时，请参见第 *6.4* 节的使用限制说明。
+
+5. 键盘电路设计
+----------------------------
+
+ASR560X 支持常规行列键盘矩阵，有关详细信息，请参考 *6.1* 节的 Pin Mux 表（*KEY_COLx* 和 *KEY_ROWx*），需要注意，键盘行按键 IO 只能从 *KEY_ROWx* 里选择，键盘列按键 IO 只能从 *KEY_COLx* 里选择。
+
+除了常规键盘矩阵外，还可以利用芯片的 ADC 功能引脚通过电阻分压检测，实现简单的多键输入功能，适合按键数量不多或者 IO 口不够用（QFN32）等应用场景。
+
+.. raw:: html
+
+   <center>
+
+|image19|
+
+ADC 键盘电路示例
+
+.. raw:: html
+
+   </center>
+
+
+6. IO 接口说明
+----------------------------
+
+6.1 PIN MUX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+QFN32 封装有 P00~P10，P27~P29 共 14 个 IO 口。QFN48 封装有 P00~P29 共 30 个 IO 口。其中 P27~P29 可配置为 GPIO 或 analog IO。
+
+.. raw:: html
+
+   <center>
+
+QFN48 Pin Mux -I
+
+.. raw:: html
+
+   </center>
+
+==== ======== ====== ========= ========= ======== ======
+Num. Pin Name Func=0 Func=1    Func=2    Func=3   Func=4
+==== ======== ====== ========= ========= ======== ======
+1    P00      NA     UART2_TXD I2C0_SCL  I2C1_SCL PWM10
+2    P01      NA     UART2_RXD I2C0_SDA  I2C1_SDA PWM11
+3    P02      GPIO2  UART0_TXD SPI0_CS   I2C0_SCL PWM0
+4    P03      GPIO3  UART0_RXD SPI0_CLK  I2C0_SDA PWM1
+5    P04      GPIO4  UART1_TXD SPI0_TXD  I2C1_SCL PWM2
+6    P05      GPIO5  UART1_RXD SPI0_RXD  I2C1_SDA PWM3
+7    P06      SWC    UART3_TXD SPI1_CS   I2S_SCLK PWM4
+8    P07      SWD    UART3_RXD SPI1_CLK  I2S_LRCK PWM5
+9    P08      GPIO8  UART2_TXD SPI1_TXD  I2S_DI   PWM6
+10   P09      GPIO9  UART2_RXD SPI1_RXD  I2S_MCLK PWM7
+11   P10      GPIO10 UART3_TXD IR1       I2S_DO   PWM8
+12   P11      GPIO11 UART1_TXD SPI0_CS   I2C1_SCL PWM9
+13   P12      GPIO12 UART1_RXD SPI0_CLK  I2C1_SDA PWM10
+14   P13      GPIO13 UART3_TXD SPI0_TXD  I2C0_SCL PWM11
+15   P14      GPIO14 UART3_RXD SPI0_RXD  I2C0_SDA PWM0
+16   P15      GPIO15 UART0_TXD SPI1_CS   I2S_SCLK PWM1
+17   P16      GPIO16 UART0_RXD SPI1_CLK  I2S_LRCK PWM2
+18   P17      GPIO17 UART0_CTS SPI1_TXD  I2S_DI   PWM3
+19   P18      GPIO18 UART0_RTS SPI1_RXD  I2S_MCLK PWM4
+20   P19      GPIO19 UART2_TXD SPI0_CS   I2C0_SCL PWM5
+21   P20      GPIO20 UART2_RXD SPI0_CLK  I2C0_SDA PWM6
+22   P21      GPIO21 UART0_TXD SPI0_TXD  I2C1_SCL PWM7
+23   P22      GPIO22 UART0_RXD SPI0_RXD  I2C1_SDA PWM8
+24   P23      GPIO23 UART1_TXD SPI1_CS   I2C0_SCL PWM9
+25   P24      GPIO24 UART1_RXD SPI1_CLK  I2C0_SDA PWM10
+26   P25      GPIO25 UART3_TXD SPI1_TXD  I2C1_SCL PWM11
+27   P26      GPIO26 UART3_RXD SPI1_RXD  I2C1_SDA PWM0
+28   P27      GPIO27 UART1_TXD UART2_RXD I2C0_SCL PWM1
+29   P28      GPIO28 UART1_RXD KEY_ROW4  I2C0_SDA PWM2
+30   P29      GPIO29 UART2_TXD KEY_ROW5  I2S_DO   PWM3
+==== ======== ====== ========= ========= ======== ======
+
+.. raw:: html
+
+   <center>
+
+QFN48 Pin Mux -II
+
+.. raw:: html
+
+   </center>
+
+==== ======== ========= ========= ========== ======== ==========
+Num. Pin Name Func=5    Func=6    Func=7     Func=8   ADC_MUX
+==== ======== ========= ========= ========== ======== ==========
+1    P00      GPIO0     KEY_COL4  AXIS_2_P   NA       
+2    P01      GPIO1     KEY_COL5  AXIS_2_N   NA       
+3    P02      AXIS_0_P  KEY_ROW0  I2S_DI     SWC      
+4    P03      AXIS_0_N  KEY_ROW1  I2S_MCLK   SWD      
+5    P04      UART0_CTS KEY_ROW2  LPUART_TXD I2C0_SCL 
+6    P05      UART0_RTS KEY_ROW3  LPUART_TXD I2C0_SDA 
+7    P06      AXIS_1_P  KEY_COL0  LPUART_TXD GPIO6    AUXADC_CH0
+8    P07      AXIS_1_N  KEY_COL1  LPUART_TXD GPIO7    AUXADC_CH1
+9    P08      AXIS_2_P  KEY_COL2  USB_DP     NA       AUXADC_CH2
+10   P09      AXIS_2_N  KEY_COL3  USB_DM     NA       AUXADC_CH3
+11   P10      UART0_CTS KEY_ROW4  NA         NA       AUXADC_CH4
+12   P11      AXIS_1_N  KEY_ROW4  SWC        NA       AUXADC_CH5
+13   P12      I2S_DO    KEY_ROW5  SWD        NA       AUXADC_CH6
+14   P13      AXIS_0_P  KEY_COL4  LPUART_TXD NA       AUXADC_CH7
+15   P14      AXIS_0_N  KEY_COL5  LPUART_TXD NA       
+16   P15      AXIS_1_P  KEY_ROW6  USB_DP     NA       
+17   P16      IR0       KEY_ROW7  USB_DM     NA       
+18   P17      AXIS_2_P  KEY_COL6  SWC        NA       
+19   P18      AXIS_2_N  KEY_COL7  SWD        NA       
+20   P19      AXIS_0_P  KEY_ROW8  LPUART_TXD NA       
+21   P20      AXIS_0_N  KEY_ROW9  LPUART_TXD NA       
+22   P21      AXIS_1_P  KEY_ROW10 NA         NA       
+23   P22      AXIS_1_N  KEY_ROW11 NA         NA       
+24   P23      AXIS_2_P  KEY_ROW12 LPUART_TXD NA       
+25   P24      AXIS_2_N  KEY_ROW13 LPUART_TXD NA       
+26   P25      NA        KEY_ROW2  NA         NA       
+27   P26      I2S_DO    KEY_ROW3  NA         NA       
+28   P27      KEY_COL0  KEY_ROW0  NA         NA       
+29   P28      KEY_COL1  KEY_ROW1  NA         NA       
+30   P29      KEY_COL2  KEY_ROW4  NA         NA       
+==== ======== ========= ========= ========== ======== ==========
+
+
+.. note:: 如果需要使用 LPUART RXD，可通过配置寄存器从 P02~P26 中选择一个 Pad 并将其配置成 GPIO（不需要额外配置为输入/输出模式）。有关详细信息，请参见 *ASR560X Series_Datasheet* 的第 2.4.3 节：*UART*。
+
+6.2 IO 接口电压
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+需要注意，当芯片的 VBATA 电源 PIN 输入电压大于或等于 3.3 V 时，P02/P03/P04/P05 四个 IO 口的电压跟随 VBATA 电源 PIN 的输入电压，其他 IO 则跟随 VBATB 电源 PIN 的电压（此时 VBATB 电压固定为 3.3 V）；当芯片的 VBATA 电源 PIN 输入电压小于 3.3 V 时，所有 IO 的电压均跟随 VBATA 电源。
+
+.. raw:: html
+
+   <center>
+
+=================================== =============== ==============
+**IO PAD**                          **VBATA>=3.3V** **VBATA<3.3V**
+=================================== =============== ==============
+P02/P03/P04/P05 的电压              =VBATA          =VBATA
+除上述 4 个 IO 之外的其它 IO 的电压 =3.3V           =VBATA
+=================================== =============== ==============
+
+.. raw:: html
+
+   </center>
+
+6.3 SEL 引脚模式说明
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+芯片有 2 个 IO 复用引脚（SEL0/SEL1），用于在上电时配置不同的启动模式，具体见下表：
+
+.. raw:: html
+
+   <center>
+
+=============== =================== ===================
+**Mode Name**   **MODE_SEL1 (P01)** **MODE_SEL0 (P00)**
+=============== =================== ===================
+Boot with Flash 0                   0
+Boot with UART  0                   1
+=============== =================== ===================
+
+.. raw:: html
+
+   </center>
+
+对启动模式的详细说明如下：
+
+-  **Boot with Flash** 模式：芯片上电后运行内部 Flash 中的代码，这是默认的启动模式，启动后芯片即正常运行。
+-  **Boot with UART** 模式：芯片上电后，进入 UART 烧录模式，该模式下默认通过 UART1 TX/RX（P04/P05）这组串口将 BootLoader 和 Image 烧录到内部 Flash 中。
+
+**关于 SEL 引脚配置的注意事项：**
+
+\1. 所有 IO 口内部有下拉电阻配置，如果需要置 0，只要悬空即可；如果不需要该配置引脚或不用这个 IO 口功能，也可以悬空。
+
+\2. 芯片上电复位后自动检测这 2 个引脚上的高低电平状态，从而进入相应的模式并一直保持在该模式下，当外部配置引脚状态发生改变时，必须对芯片重新上电或者外部复位以生效。
+
+\3. 如无特殊需求，只需要预留 P00（SEL0）测点即可，UART 下载启动模式是最常用的量产烧录模式。
+
+\4. 考虑到 P00（SEL0）和 P01（SEL1）这两个 IO 的特殊性，建议用户在设计时尽量不将这两个引脚用作 GPIO，如果确实要使用，则须确保外部没有上拉电路，以免芯片上电时检测到这两个口有高电平，从而进入错误的模式导致不能正常启动。
+
+6.4 P27/P28/P29 引脚说明
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+P27/P28/P29 用作 GPIO 时，需要注意如下使用限制：
+
+\1. P27 有测试模式复用判断功能，设计时\ **强烈建议不要用作 GPIO**\ 。如确实要使用，\ **禁止**\ 作为输入使用，且需确保此 IO 外部\ **没有**\ 上拉电路，以免芯片上电时检测到这个口有高电平，导致进入错误的启动模式。
+
+\2. P28/P29 配置为上拉输入时，上拉电阻较小，导致外部接到低电平后功耗会比较大，对于功耗要求较高的场景而言，可能存在限制，建议尽量避免将这 2 个引脚作为输入使用。
+
+\3. P28/P29 推挽输出高电平时，在低功耗场景下芯片内部有 10K 下拉电阻到地，功耗会比较大，对于功耗要求较高的场景而言，可能存在限制，建议尽量避免将这 2 个引脚作为输出使用。
+
+\4. P27/P28/P29 配置为高阻输入无效。
+
+6.5 DEBUG 串口
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+目前芯片默认使用 UART1 TX/RX（P04/P05）作为 DEBUG log 输入输出串口，同时也是 UART 启动模式下默认的程序下载串口，需要引出测点。
+
+如果要做蓝牙 DTM 测试，则需要全功能串口（TX/RX/CTS/RTS），为了方便测试，UART0_TX/UART0_RX/UART0_CTS/UART0_RTS（P02/P03/P04/P05）四个 IO 都需要预留测点。
+
+.. attention:: UART1_RX 接口如果用户不使用，仅作为程序下载接口时，建议加一个上拉电阻，以防正常启动时，该引脚悬空，导致 RX 进入异常状态。
+
+6.6 IO 唤醒功能
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+除 P00 和 P01 两个 IO 口外，其他 IO 口均可用做中断唤醒，触发方式为高低电平或边沿触发。
+
+6.7 ADC 输入引脚电压
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ASR560X 系列有 1 个 ADC 控制器，包括 8 路通用的 ADC，1 路温度采集 ADC，1 路供电电压采集 ADC。QFN48 封装的芯片从 P06 到 P13 依次对应 ADC CH0 ~ CH7，QFN32 封装的芯片从 P06 到 P10 依次对应 ADC CH0 ~ CH4。
+
+**内部 ADC 参考电压为 1.2 V**\ ，所以当 IO 被配置成 ADC 输入功能时，需要确保外部通过分压电阻后的输入电压在 0 到 1.2 V 有效电压量程内。
+
+6.8 USB 功能引脚
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+当 IO 配置成 USB_DP/DN 功能引脚时，需注意外部 PCB 走线要按照差分对走线的要求进行。
+
+7. 关于量产测试点的引出建议
+--------------------------------------------------------
+
+\1. 使用粗一些的连线将夹具上的探针分别连接到电源和地。
+
+\2. Reset 信号，可以引出到夹具，用复位按键手动控制；也可以接到外部可编程 IO 资源，由上位机进行控制。
+
+\3. 2 个 SEL 启动模式引脚 SEL0/SEL1（P00/P01），根据客户实际应用场景可以选择性引出测点，用不到的模式引脚可以直接悬空不引出。测点可以引出到夹具，用开关手动置高或置低（悬空）；也可以接到外部可编程 IO 资源，由上位机进行控制。
+
+\4. UART1 TX/RX（P04/P05），用于 image 烧录和 DEBUG LOG 信息输入输出，引出至外部串口，转 USB 器件连接到上位机。
+
+.. attention:: 使用夹具进行量产测试时是用探针顶住测点，探针顶到对应测点的时刻可能会有差异，进而影响芯片上电时对 SEL 引脚电平高低的判断，比如 SEL 引脚顶针还没接触到测点，而此时电源和地的顶针已经接触上对应的测点，就会导致芯片上电后判断 SEL 引脚为悬空拉低，从而没有进入烧录模式。建议 SEL 引脚探针选用略长于其他探针的型号（比如长 1-2 mm），以确保模块上电前 SEL 引脚测点已经处于确定的电平状态。
+
+
+.. |image1| image:: ../../img/560X_硬件设计/图1-1.png
+.. |image2| image:: ../../img/560X_硬件设计/图1-2.png
+.. |image3| image:: ../../img/560X_硬件设计/图2-1.png
+.. |image4| image:: ../../img/560X_硬件设计/图2-2.png
+.. |image5| image:: ../../img/560X_硬件设计/图2-3.png
+.. |image6| image:: ../../img/560X_硬件设计/图2-4.png
+.. |image7| image:: ../../img/560X_硬件设计/图2-5.png
+.. |image8| image:: ../../img/560X_硬件设计/图2-6.png
+.. |image9| image:: ../../img/560X_硬件设计/图2-7.png
+.. |image10| image:: ../../img/560X_硬件设计/图2-8.png
+.. |image11| image:: ../../img/560X_硬件设计/图2-9.png
+.. |image12| image:: ../../img/560X_硬件设计/图2-10.png
+.. |image13| image:: ../../img/560X_硬件设计/图3-1.png
+.. |image14| image:: ../../img/560X_硬件设计/图3-2.png
+.. |image15| image:: ../../img/560X_硬件设计/图3-3.png
+.. |image16| image:: ../../img/560X_硬件设计/图4-1.png
+.. |image17| image:: ../../img/560X_硬件设计/图4-2.png
+.. |image18| image:: ../../img/560X_硬件设计/图4-3.png
+.. |image19| image:: ../../img/560X_硬件设计/图5-1.png

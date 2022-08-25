@@ -228,7 +228,7 @@ SDK 中未提供 Keil 工程文件，可以运行示例程序中的 keil.bat 生
 
 如果仍然无法烧录，请按照 Keil 的用户指南文档修改 Flash Download 配置，文档链接如下： https://www.keil.com/support/man/docs/uv4/uv4_fl_dlconfiguration.htm
 
-主要配置有 3 个：
+主要配置如下内容：
 
 (1) **Download Function**\ ：勾选 “Erase Sectors”，“Program” 和 “Verify”
 

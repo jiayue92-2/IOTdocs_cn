@@ -71,8 +71,8 @@ ASR6601 is a general LPWAN Wireless Communication SoC, with integrated RF Transc
 
 ASR6601 can achieve a high sensitivity to -148 dBm and the maximum transmit power is up to +22 dBm. This makes the chip suitable to be used in long range LPWAN and have high efficiency. The total chip package is of very small size, QFN 6 mm x 6 mm/QFN 8 mm x 8 mm.
 
-1.2 Key Feature
-~~~~~~~~~~~~~~~
+1.2 Key Features
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Small footprint: QFN48, 6 mm x 6 mm or QFN68, 8 mm x 8 mm
 

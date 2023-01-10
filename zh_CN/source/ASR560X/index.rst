@@ -1,6 +1,6 @@
 ASR560X
 =======================
-`English <https://asriot-cn.readthedocs.io/en/latest/ASR560X/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/index.html>`_
 
 这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 560X 系列产品的文档。
 

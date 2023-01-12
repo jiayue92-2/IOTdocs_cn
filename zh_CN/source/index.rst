@@ -5,6 +5,19 @@ ASR 文档页
 这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 产品的文档。
 
 
+Wi-Fi 芯片
+--------------------------------
+
+==================  ==================  ================== 
+|ASR550X SoC|_               
+------------------  ------------------  ------------------
+`ASR550X SoC`_                
+==================  ==================  ==================
+
+.. |ASR550X SoC| image:: img/10.png
+.. _ASR550X SoC: ASR550X/index.html
+
+
 BT/BLE 芯片
 --------------------------------
 
@@ -16,7 +29,6 @@ BT/BLE 芯片
 
 .. |ASR560X SoC| image:: img/01.png
 .. _ASR560X SoC: ASR560X/index.html
-\
 
 
 LPWAN 芯片
@@ -37,6 +49,18 @@ LPWAN 芯片
    :caption: 语言
    
    English <https://asriot.readthedocs.io/en/latest/>
+
+.. toctree::
+   :hidden:
+   :caption: ASR550X
+   
+   ASR550X/芯片规格/index
+   ASR550X/硬件介绍/index
+   ASR550X/烧录工具介绍/index
+   ASR550X/演示工程/index
+   ASR550X/软件快速入门/index
+   ASR550X/常见问题/index
+   ASR550X/认证/index
 
 .. toctree::
    :hidden:

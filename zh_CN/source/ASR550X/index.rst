@@ -1,6 +1,6 @@
 ASR550X
 =======================
-`English <https://asriot-cn.readthedocs.io/zh/latest/ASR550X/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR550X/index.html>`_
 
 这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 550X 系列产品的文档。
 

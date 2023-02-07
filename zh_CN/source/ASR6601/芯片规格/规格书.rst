@@ -22,7 +22,7 @@ The product models corresponding to this document are as follows.
 
 **Copyright Notice**
 
-© 2021 ASR Microelectronics Co., Ltd. All rights reserved. No part of this document can be reproduced, transmitted, transcribed, stored, or translated into any language in any form or by any means without the written permission of ASR Microelectronics Co., Ltd.
+© 2023 ASR Microelectronics Co., Ltd. All rights reserved. No part of this document can be reproduced, transmitted, transcribed, stored, or translated into any language in any form or by any means without the written permission of ASR Microelectronics Co., Ltd.
 
 **Trademark Statement**
 
@@ -43,21 +43,7 @@ All liability, including liability for infringement of any proprietary rights ca
 +---------+---------+----------------------------------------------------------------------------------------------------------+
 | Date    | Version | Release Notes                                                                                            |
 +=========+=========+==========================================================================================================+
-| 2020.09 | V1.0.0  | First Release.                                                                                           |
-+---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2020.09 | V1.0.1  | Updated ASR6601CB QFN48 pin assignment.                                                                  |
-+---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2020.10 | V1.0.2  | Added Section 3.3.                                                                                       |
-+---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2020.12 | V1.1.0  | Updated the contents and section order of Chapter 2. Added Section 2.3, Section 3.1.3 and Section 3.2.3. |
-+---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2021.02 | V1.2.0  | Updated Section 1.5. Added Chapter 2.                                                                    |
-+---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2021.07 | V1.3.0  | Updated the descriptions about CPU.                                                                      |
-+---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2021.10 | V1.4.0  | Added some notes at the end of Section 3.4.                                                              |
-+---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2021.11 | V1.4.1  | Corrected a typo.                                                                                        |
+| 2023.01 | V1.5.0  | Added Section 3.5.                                                                                       |
 +---------+---------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -286,6 +272,12 @@ RF Input Power Pin              +10  dBm
     - The XO32K block operates either in its normal mode or low-power mode. Through the proper design of XO32K PCB routing, the XO32K can work in its low-power mode, and in this case, the IDD current with the XO32K clk is as low as that with the RCO32K clk. For more details, please refer to ASR6601_Harware Design Guide_V1.3.0. Otherwise, the XO32K block shall only work in the normal mode, and the current will increase about 500nA compared with the low-power mode.
 
 
+3.5 ESD Ratings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|image6|
+
+
 4. Package and Pin Definition
 -----------------------------
 
@@ -438,12 +430,12 @@ RF Input Power Pin              +10  dBm
 4.1.2 ASR6601SE QFN68 Pin Assignment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image6|
+|image7|
 
 4.1.3 ASR6601SE QFN68 Mechanical Parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image7|
+|image8|
 
 
 4.2 ASR6601CB QFN48
@@ -555,12 +547,12 @@ RF Input Power Pin              +10  dBm
 4.2.2 ASR6601CB QFN48 Pin Assignment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image8|
+|image9|
 
 4.2.3 ASR6601CB QFN48 Mechanical Parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image9|
+|image10|
 
 
 4.3 GPIO Function MUX Table
@@ -710,7 +702,8 @@ GPIO62   GPIO_PORTD_14 LPTIM_IN2   LPUART_RX  LPTIM_ETR
 .. |image3| image:: ../../img/6601_规格书/图2-1.png
 .. |image4| image:: ../../img/6601_规格书/表3-3.png
 .. |image5| image:: ../../img/6601_规格书/表3-4.png
-.. |image6| image:: ../../img/6601_规格书/图4-1.png
-.. |image7| image:: ../../img/6601_规格书/图4-2.png
-.. |image8| image:: ../../img/6601_规格书/图4-3.png
-.. |image9| image:: ../../img/6601_规格书/图4-4.png
+.. |image6| image:: ../../img/6601_规格书/表3-5.png
+.. |image7| image:: ../../img/6601_规格书/图4-1.png
+.. |image8| image:: ../../img/6601_规格书/图4-2.png
+.. |image9| image:: ../../img/6601_规格书/图4-3.png
+.. |image10| image:: ../../img/6601_规格书/图4-4.png

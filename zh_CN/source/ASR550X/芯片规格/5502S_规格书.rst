@@ -671,7 +671,7 @@ ASR5502S Pin Descriptions
 +-------------------------+---------------+---------------------------------+---------+
 
 7. Reference Application Circuits
-=================================
+-----------------------------------
 
 Take ASR5502S as an example, the reference PCB design is shown in following diagram.
 

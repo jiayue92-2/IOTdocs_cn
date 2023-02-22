@@ -1,4 +1,4 @@
-ASR5502S Datasheet
+ASR5502S 芯片技术规格书
 ==================
 
 Introduction

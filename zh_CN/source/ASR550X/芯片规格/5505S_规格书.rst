@@ -1,0 +1,546 @@
+ASR5505S Datasheet
+==================
+
+Introduction
+------------
+
+**About This Document**
+
+This document introduces the specifications of loT Wi-Fi transceiver chip ASR5505S.
+
+**Included Chip Models**
+
+The product models corresponding to this document are as follows.
+
+======== ========= ============= ============ =================
+Model    SiP Flash Package       Protocol     Operating Modes
+======== ========= ============= ============ =================
+ASR5505S No        QFN48, 6*6 mm 802.11 b/g/n Support SDIO mode
+======== ========= ============= ============ =================
+
+**Copyright Notice**
+
+© 2023 ASR Microelectronics Co., Ltd. All rights reserved. No part of this document can be reproduced, transmitted, transcribed, stored, or translated into any languages in any form or by any means without the written permission of ASR Microelectronics Co., Ltd.
+
+**Trademark Statement**
+
+ASR and ASR Microelectronics Co., Ltd. are trademarks of ASR Microelectronics Co., Ltd. 
+
+Other trade names, trademarks and registered trademarks mentioned in this document are property of their respective owners.
+
+**Disclaimer**
+
+ASR do not give any warranty of any kind and may make improvements and/or changes in this document or in the product described in this document at any time.
+
+This document is only used as a guide, and no contents in the document constitute any form of warranty. Information in this document is subject to change without notice.
+
+All liability, including liability for infringement of any proprietary rights caused by using the information in this document is disclaimed.
+
+**ASR Microelectronics Co., Ltd.**
+
+Address: 9F, Building 10, No. 399 Keyuan Road, Zhangjiang High-tech Park, Pudong New Area, Shanghai, 201203, China
+
+Homepage: http://www.asrmicro.com/
+
+**Revision History**
+
+======= ======= ===========================================
+Date    Version Release Notes
+======= ======= ===========================================
+2022.12 V1.2.0  Added Figure 2-1, Figure 2-2 and Table 2-1.
+======= ======= ===========================================
+
+1. Overview
+-----------
+
+1.1 General
+~~~~~~~~~~~
+
+ASR5505S is a highly integrated, high performance and low cost 1x1 IEEE 802.11 b/g/n transceiver chip for data transmission or high-speed applications. ASR5505S integrates RF transceiver, 802.11 PHY+MAC, SDIO 2.0 interface, other advanced peripheral interfaces, Real Time Counter (RTC) and power management circuits. The integrated RF and analog circuit incorporate T/R switch, RF balun, power amplifier, low-noise amplifier, and entire power management modules. Therefore, ASR5505S provides a small form-factor solution with minimal external components as a SDIO slave for data transmission or high-speed applications, such as access points, digital TV set, set-top-box, tablet PC (PAD), IP Camera and more.
+
+1.2 Key Feature
+~~~~~~~~~~~~~~~
+
+-  **Power Management Unit (PMU)**
+
+   -  Integrated DCDC and LDO, no need of off-chip PMU device
+   -  Support single supply input, range from 3.3 V ~ 5 V
+
+-  **IEEE 802.11 Features**
+
+   -  Integrated Power Amplifier (PA) with internal power detector and closed loop power calibration
+   -  Integrated T/R switch and RF balun, no need of off-chip matching network
+   -  Support 802.11 b/g/n compatible WLAN
+   -  Support 802.11e QoS enhancement (WMM)
+   -  Support 802.11i (WPA/WPA2 PSK), Open/WEP/TKIP/CCMP, WPA3
+   -  Support power saving mechanism
+
+-  **MAC Features**
+
+   -  Transmission and reception of A-MPDU
+   -  Support for immediate ACK and Block-ACK policies
+   -  Support for RTS/CTS and CTS-to-self frame sequence for protecting frame exchange
+   -  Back-off engine, TSF, NAV maintenance, and TBTT generation in hardware
+   -  802.11e: QoS for wireless multimedia support
+   -  Supports Encryption/Decryption (WPA, CCMP, WEP and TKIP)
+   -  Compatible with 11b/g/n devices
+
+-  **PHY Features**
+
+   -  One Transmit and one Receive path (1T1R)
+   -  20 MHz and 40 MHz bandwidth transmission in 2.4 GHz band
+   -  BCC
+   -  Support of non-HT PPDU, HT-MF PPDU and HT-GF PPDU
+   -  DSSS/CCK rate for 11b, OFDM Legacy rate for 11g and MCS 0 to 7 for 11n
+   -  Short GI
+   -  STBC when only receiving one spatial stream
+
+-  **Interface Features**
+
+   -  Support SDIO 1.1 and 2.0
+   -  Support SDR12 and SDR25
+   -  UART
+   -  GPIO
+
+-  **System Features**
+
+   -  4K-bit OTP is integrated
+
+   -  XTAL Clock: 26/40 MHz
+
+   -  Low-Power Clock: XO 32.768 KHz Clock, RC 32.768 KHz Clock
+
+   -  Multi-Port and Aggregation DMA optimized for SDIO
+
+   -  RTC
+
+1.3 Block Diagram
+~~~~~~~~~~~~~~~~~
+
+|image1|
+
+1.4 Specification
+~~~~~~~~~~~~~~~~~
+
+-  Access Points
+
+-  Digital TV set
+
+-  Set-Top-Box
+
+-  Tablet PC (PAD)
+
+-  IP Camera
+
+-  USB Wi-Fi dongle
+
+-  Wi-Fi Module
+
+2. System Function Descriptions
+-------------------------------
+
+2.1 PMU
+~~~~~~~
+
+ASR5505S can support 3.3 V ~ 5 V single power supply, which can come from a battery or a DC-DC convertor or an AC-DC convertor directly. There is no need of any other off-chip DCDC or LDO device. The PMU consists of Always-ON (AON) control logic, RTC circuits, DCDC, and LDOs. All these circuits have characters of low noise and low quiescent current performances.
+
+DCDC is powered by single power supply and it generates two BUCK voltages of 1.2 V and 1.8 V. 1.2 V BUCK is supply for Digital LDO (DLDO). 1.8 V BUCK is supply for all Analog LDOs (ALDO). The LDO33 has 3.3 V output that provides supply for DVDD IO, RTC LDO (RLDO) and 3.3 V analog circuits.
+
+The chip’s power-on sequence and reset sequence are described in the following diagrams:
+
+.. raw:: html
+
+   <center>
+
+|image2|
+Timing Sequence of Power-on
+
+.. raw:: html
+
+   </center> 
+
+.. raw:: html
+
+   <center>
+
+|image3|
+Timing Sequence of Reset
+
+.. raw:: html
+
+   </center>
+
+
+.. raw:: html
+
+   <center>
+
+Timing Specification of Power Sequence
+
+.. raw:: html
+
+   </center>
+======== ====================== ======= ======= ====
+Symbol   Parameter              Typical Maximum Unit
+======== ====================== ======= ======= ====
+T_11aon  VDD11_AON rising time  100     500     μs
+T_por    POR release wait time  350     800     μs
+T_18     AVDD18_xxx rising time 150     1000    μs
+T_12     AVDD12_xxx rising time 150     1000    μs
+T_11core VDD11_CORE rising time 150     1000    μs
+======== ====================== ======= ======= ====
+
+
+2.2 Clock
+~~~~~~~~~
+
+ASR5505S supports 26 MHz or 40 MHz XO frequency to generate all high performance clock signals in on-chip RF/Analog PLL. In RTC, circuits support two low power clock sources, the single-ended input 32.768 KHz XO and the RC Oscillator (RCO). The customer can use RCO as RTC reference clock to save the BoM. The RCO frequency can be auto-calibrated on chip.
+
+2.3 One-Time Programmable Memory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ASR5505S provides 4K-bit One-Time Programmable (OTP) memory.
+
+Hardware configuration parameters may be stored in first internal 2K-bit OTP memory, which is read by system software after device reset. In addition, customer-specific parameters can be stored, depending on the specific board design in reserved 2K-bit OTP memory.
+
+2.4 Interfaces
+~~~~~~~~~~~~~~
+
+2.4.1 SDIO
+^^^^^^^^^^
+
+Secure Digital Input and Output (SDIO) block is designed to be a SDIO slave device to work with SDIO host for bi-directional data transfer. All command should be issued by host device. It has an AHB master interface connect to memory controller, while has an AHB slave interface connect to Advanced eXtensible Interface (AXI) fabric for CPU access.
+
+Features:
+
+-  Support SDIO 1.1 and 2.0 specifications
+
+-  Support 1-bit, 4-bit SDIO transfer mode at the clock range of 0~40 MHz
+
+-  Configurable clock edge for sampling and driving
+
+-  Configurable block size from 1 to 512 Bytes (in multiples of 4)
+
+-  Supply card to host interrupt by GPIO
+
+-  Support multi-ports DMA mode
+
+-  Support aggregation DMA mode
+
+2.4.2 DMAC
+^^^^^^^^^^
+
+Direct Memory Access (DMA) is used to provide high-speed data transfer between peripherals and memory, and between memory and memory, without CPU’s operations. It provides two DMA channels and sixteen handshakes with peripheral.
+
+Features:
+
+-  Two Advanced High Performance Bus (AHB) masters, one is to access memory and the other is to access peripheral
+
+-  Two DMA channels
+
+-  Sixteen handshakes with peripherals
+
+-  Allow the AHB slave interface to return an error response when an illegal access is attempted
+
+-  Maximum block size in source transfer widths is 4095
+
+-  Programmable channel x’s source transfer and destination transfer width
+
+-  FIFO depth is 8 bytes for each channel
+
+-  Support multi-block DMA transfers on each channel
+
+-  Support LLP mode
+
+2.4.3 UART
+^^^^^^^^^^
+
+ASR5505S provides Universal Asynchronous Receiver Transmitter (UART) controller with auto-flow control, which is used for communication with external devices.
+
+Features:
+
+-  TX/RX FIFO depth is 16 Bytes
+
+-  Support auto flow control mode
+
+-  Programmable frame properties, such as number of data bits per frame (5~8), optional parity bit (odd/even), number of stop bits (1,1.5,2)
+
+-  Include additional FIFO status registers and shadow registers, that can be accessed by software
+
+-  Loopback mode for test
+
+-  Support DMA mode
+
+2.4.4 GPIO
+^^^^^^^^^^
+
+General purpose Input / Output (GPIO) pins are fully configurable. They are multiplexed with other interfaces, such as I2C, SPI, UART and etc. The GPIO pins support the below features:
+
+-  Input mode: the input value can be read through register.
+
+-  Output mode: the output value can be set through register.
+
+-  Interrupt: the input can be set to edge-trigger or level-trigger to generate CPU interrupt. Support 4 types of trigger: Low level, high level, falling edge and rising edge.
+
+-  Internal pull-up or pull-down configurable
+
+3. Wi-Fi Subsystem Descriptions
+-------------------------------
+
+ASR5505S supports features specified in the IEEE 802.11 base standard, and amended by IEEE 802.11n.
+
+3.1 Wi-Fi MAC
+~~~~~~~~~~~~~
+
+ASR5505S WLAN Media Access Control (MAC) is designed to support high throughput operation with low power consumption.
+
+-  Transmission and reception of aggregated MPDUs (A-MPDU)
+
+-  Support for power management schemes, including WMM power-save
+
+-  Support for immediate ACK and Block-ACK policies
+
+-  Interframe space timing support, including RIFS
+
+-  Support for RTS/CTS and CTS-to-self frame sequences for protecting frame exchanges
+
+-  Back-off counters in hardware for supporting multiple priorities as specified in the WMM specification
+
+-  Timing synchronization function (TSF), network allocation vector (NAV) maintenance, and target beacon transmission time (TBTT) generation in hardware
+
+-  Hardware off-load for AES-CCMP, legacy WPA TKIP, legacy WEP ciphers, WAPI, and support for key management
+
+-  Statistics counters for MIB support
+
+-  802.11 e: QoS for wireless multimedia technology
+
+-  Monitor mode: sniff all frames from the medium
+
+3.2 Wi-Fi PHY
+~~~~~~~~~~~~~
+
+ASR5505S WLAN Digital Port Physical Layer (PHY) is designed to comply with IEEE 802.11 b/g/n single stream to provide wireless LAN connectivity or low-power applications.
+
+-  Supports IEEE 802.11b, 11g, 11n single-stream standards
+
+-  Supports 802.11n MCS0-7 in both 20 MHz and 40 MHz bandwidth
+
+-  Supports Optional Greenfield mode in Tx and Rx
+
+-  Algorithms achieve low power, enhanced sensitivity, range and reliability
+
+-  Automatic gain control scheme for blocking and non-blocking application scenario
+
+3.3 Wi-Fi RF
+~~~~~~~~~~~~
+
+ASR5505S integrates fully 802.11 b/g/n RF transceiver, including T/R switch, matching network, PA, Low Noise Amplifier (LNA), and RF synthesizer. There is no need of off-chip matching network, which saves the BoM and module Print Circuit Board (PCB) size.
+
+The transceiver has auto-calibration and sensor circuits to guarantee the RF performance in mass production. These calibrations include transmit power, IQ imbalance, LO leakage, DC offset, filter bandwidth and etc. The temperature sensor and process sensor are also integrated on-chip.
+
+The following table shows Wi-Fi RF TX and RX specification respectively.
+
+.. raw:: html
+
+   <center>
+
+Wi-Fi TX Specification
+|image4|
+
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
+
+Wi-Fi RX Specification
+|image5|
+
+.. raw:: html
+
+   </center>
+
+
+4. Software Descriptions
+------------------------
+
+The Wi-Fi transceiver chip will connect with Application Process chip via SDIO interface.
+
+The software architecture is as below:
+
+|image6|
+
+5. Electrical Characteristics
+-----------------------------
+
+5.1 Absolute Maximum Rating
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+=========================== ========= ==== ==== ==== ====
+Parameter                   Symbol    Min. Typ. Max. Unit
+=========================== ========= ==== ==== ==== ====
+Power supply                VBAT_DCDC -0.3      5.8  V
+Storage temperature range   TSTR      -40       125  °C
+Operating temperature range TOPR      -40       85   °C
+=========================== ========= ==== ==== ==== ====
+
+5.2 Recommended Operating Conditions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+=========================== ========= ==== ===== ==== ====
+Parameter                   Symbol    Min. Typ.  Max. Unit
+=========================== ========= ==== ===== ==== ====
+Power supply                VBAT_DCDC 3    3.6/5 5.2  V
+Operating temperature range TOPR      -40  -     85   °C
+=========================== ========= ==== ===== ==== ====
+
+6. Package Specifications
+-------------------------
+
+6.1 ASR5505S Mechanical Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ASR5505S uses 6 mm x 6 mm QFN package of 48 pin with 0.4 mm pitch.
+
+.. raw:: html
+
+   <center>
+
+|image7|
+
+.. raw:: html
+
+   </center>
+
+6.2 ASR5505S Pin Assignment and Description
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The chip top view and pin descriptions of ASR5505S are shown as follows.
+
+.. raw:: html
+
+   <center>
+
+|image8|
+ASR5505S Package Top View
+
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
+
+ASR5505S Pin Description
+
+.. raw:: html
+
+   </center>
++-------------------------+---------------+----------------------------------+---------+
+| Num.                    | Name          | Pin Description                  | I/O     |
++=========================+===============+==================================+=========+
+| **Power, Clock**        |               |                                  |         |
++-------------------------+---------------+----------------------------------+---------+
+| 39                      | VDD11_AON     | 1.1 V digital always-on supply   | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 34                      | VDD11_CORE    | 1.1 V digital core domain supply | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 42                      | AVDD12_DIGLDO | 1.2 V digital core LDO supply    | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 1                       | AVDD18_ANA1   | 1.8 V analog supply              | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 43                      | AVDD18_ANA2   | 1.8 V analog supply              | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 44                      | AVDD18_ANA3   | 1.8 V analog supply              | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 47                      | AVDD18_ANA4   | 1.8 V analog supply              | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 48                      | AVDD18_ANA5   | 1.8 V analog supply              | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 3                       | AVDD33_ANA1   | 3.3 V analog supply              | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 4                       | AVDD33_ANA2   | 3.3 V analog supply              | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 41                      | AVDD33_RTC    | 3.3 V RTC domain supply          | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 12                      | DVDD33_CORE0  | 3.3 V digital IO supply          | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 31                      | DVDD33_CORE1  | 3.3 V digital IO supply          | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 40                      | XO32K         | 32.768 KHz clock input           | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| 45                      | XO26M_P1      | 26 MHz clock input               | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| 46                      | XO26M_P2      | 26 MHz clock input               | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| **DCDC, LDO**           |               |                                  |         |
++-------------------------+---------------+----------------------------------+---------+
+| 21                      | RVDD33_LDO    | 3.3 V LDO output                 | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| 22                      | VBAT_DCDC     | 3.3~5 V DCDC/LDO supply          | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| 23                      | VX_BUCK       | DCDC signal                      | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| 24                      | VB_DCDC       | DCDC signal                      | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| 25                      | VBUCK18       | 1.8 V DCDC buck output           | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| 26                      | VBUCK12       | 1.2 V DCDC buck output           | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+| 27                      | AVSS_DCDC     | DCDC ground                      | Power   |
++-------------------------+---------------+----------------------------------+---------+
+| **GPIO, Reset, Select** |               |                                  |         |
++-------------------------+---------------+----------------------------------+---------+
+| 8                       | DIG_PAD0      | UART0_TXD                        | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 9                       | DIG_PAD1      | UART0_RXD                        | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 14                      | DIG_PAD2      | GPIO                             | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 13                      | DIG_PAD3      | SDIO_INT                         | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 15                      | DIG_PAD4      | SDIO_CMD                         | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 16                      | DIG_PAD5      | SDIO_CLK                         | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 17                      | DIG_PAD6      | SDIO_DATA0                       | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 18                      | DIG_PAD7      | SDIO_DATA1                       | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 19                      | DIG_PAD8      | SDIO_DATA2                       | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 20                      | DIG_PAD9      | SDIO_DATA3                       | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 10                      | DIG_PAD10     | GPIO10                           | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 11                      | DIG_PAD11     | SDIO_INT                         | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 36                      | DIG_PAD12     | GPIO                             | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 35                      | DIG_PAD13     | GPIO                             | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 33                      | DIG_PAD14     | GPIO                             | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 32                      | DIG_PAD15     | GPIO                             | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 37                      | PAD_SEL       | Mode select                      | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| 38                      | PAD_RSTN      | Reset                            | Digital |
++-------------------------+---------------+----------------------------------+---------+
+| **RF Interface**        |               |                                  |         |
++-------------------------+---------------+----------------------------------+---------+
+| 2                       | RF_INOUT      | Wi-Fi RF input/output            | Analog  |
++-------------------------+---------------+----------------------------------+---------+
+
+
+.. |image1| image:: ../../img/550X_DS/图1-1.png
+.. |image2| image:: ../../img/550X_DS/图2-1.png
+.. |image3| image:: ../../img/550X_DS/图2-2.png
+.. |image4| image:: ../../img/550X_DS/表3-1.png
+.. |image5| image:: ../../img/550X_DS/表3-2.png
+.. |image6| image:: ../../img/550X_DS/图4-1.png
+.. |image7| image:: ../../img/550X_DS/图6-1.png
+.. |image8| image:: ../../img/550X_DS/图6-2.png

@@ -1,4 +1,4 @@
-ASR5505S Datasheet
+ASR5505S 芯片技术规格书
 ==================
 
 Introduction
@@ -345,7 +345,7 @@ The following table shows Wi-Fi RF TX and RX specification respectively.
    <center>
 
 Wi-Fi TX Specification
-|image4|
+|image|
 
 .. raw:: html
 
@@ -356,7 +356,7 @@ Wi-Fi TX Specification
    <center>
 
 Wi-Fi RX Specification
-|image5|
+|image51|
 
 .. raw:: html
 
@@ -536,11 +536,11 @@ ASR5505S Pin Description
 +-------------------------+---------------+----------------------------------+---------+
 
 
-.. |image1| image:: ../../img/550X_DS/图1-1.png
-.. |image2| image:: ../../img/550X_DS/图2-1.png
-.. |image3| image:: ../../img/550X_DS/图2-2.png
-.. |image4| image:: ../../img/550X_DS/表3-1.png
-.. |image5| image:: ../../img/550X_DS/表3-2.png
-.. |image6| image:: ../../img/550X_DS/图4-1.png
-.. |image7| image:: ../../img/550X_DS/图6-1.png
-.. |image8| image:: ../../img/550X_DS/图6-2.png
+.. |image1| image:: ../../img/550X_规格书1/图1-1.png
+.. |image2| image:: ../../img/550X_规格书1/图2-1.png
+.. |image3| image:: ../../img/550X_规格书1/图2-2.png
+.. |image4| image:: ../../img/550X_规格书1/表3-1.png
+.. |image5| image:: ../../img/550X_规格书1/表3-2.png
+.. |image6| image:: ../../img/550X_规格书1/图4-1.png
+.. |image7| image:: ../../img/550X_规格书1/图6-1.png
+.. |image8| image:: ../../img/550X_规格书1/图6-2.png

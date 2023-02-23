@@ -680,13 +680,13 @@ The chip is powered by single supply input "VCC" with range from 3.3~5 V. The in
 |image10|
 
 
-.. |image1| image:: ../../img/550X_规格书/图1-1.png
-.. |image2| image:: ../../img/550X_规格书/表2-2.png
-.. |image3| image:: ../../img/550X_规格书/表2-4.png
-.. |image4| image:: ../../img/550X_规格书/表3-1.png
-.. |image5| image:: ../../img/550X_规格书/表3-2.png
-.. |image6| image:: ../../img/550X_规格书/图4-1.png
-.. |image7| image:: ../../img/550X_规格书/图4-2.png
-.. |image8| image:: ../../img/550X_规格书/图6-1.png
-.. |image9| image:: ../../img/550X_规格书/图6-2.png
-.. |image10| image:: ../../img/550X_规格书/图7-1.png
+.. |image1| image:: ../../img/5502S_规格书/图1-1.png
+.. |image2| image:: ../../img/5502S_规格书/表2-2.png
+.. |image3| image:: ../../img/5502S_规格书/表2-4.png
+.. |image4| image:: ../../img/5502S_规格书/表3-1.png
+.. |image5| image:: ../../img/5502S_规格书/表3-2.png
+.. |image6| image:: ../../img/5502S_规格书/图4-1.png
+.. |image7| image:: ../../img/5502S_规格书/图4-2.png
+.. |image8| image:: ../../img/5502S_规格书/图6-1.png
+.. |image9| image:: ../../img/5502S_规格书/图6-2.png
+.. |image10| image:: ../../img/5502S_规格书/图7-1.png

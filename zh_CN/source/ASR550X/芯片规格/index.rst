@@ -1,5 +1,6 @@
 ASR550X 芯片规格
 =======================
+`English <https://asriot.readthedocs.io/en/latest/ASR550X/Datasheet/index.html>`_
 
 
 .. toctree::

@@ -345,7 +345,7 @@ The following table shows Wi-Fi RF TX and RX specification respectively.
    <center>
 
 Wi-Fi TX Specification
-|image|
+|image4|
 
 .. raw:: html
 
@@ -356,7 +356,7 @@ Wi-Fi TX Specification
    <center>
 
 Wi-Fi RX Specification
-|image51|
+|image5|
 
 .. raw:: html
 

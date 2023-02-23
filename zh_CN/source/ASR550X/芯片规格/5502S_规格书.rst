@@ -56,11 +56,11 @@ Homepage: http://www.asrmicro.com/
 
 **Revision History**
 
-======= ======= =======================================
+======= ======= ===================================================
 Date    Version Release Notes
-======= ======= =======================================
+======= ======= ===================================================
 2022.02 V2.7.1  Updated Figure 6-1.
-======= ======= =======================================
+======= ======= ===================================================
 
 1. Overview
 -----------
@@ -243,9 +243,9 @@ Hardware configuration parameters including Flash-Encryption may be stored in fi
 
 The following table describes the various MCU peripherals and how they are mapped to the processor memory.
 
-================== ============= ===========
+================== ============= ==================
 Description        Start Address                    End Address
-================== ============= ===========
+================== ============= ==================
 ROM                0x0000_0000                      0x0000_5FFF
 SRAM               0x0800_0000                     0x0803_FFFF
 FLASH              0x1000_0000                     0x17FF_FFFF
@@ -274,7 +274,7 @@ CACHE_CFG          0x4001_C000               0x4001_CFFF
 CYPT310_CFG        0x4001_D000               0x4001_DFFF
 Share mem          0x6000_0000                0x607F_FFFF
 MAC/PHY            0x6080_0000                 0x61FF_FFFF
-================== ============= ===========
+================== ============= ==================
 
 
 2.5 Peripherals
@@ -442,7 +442,6 @@ The Watch Dog Timer is used to resume the controller operation when it had been 
 Crypto Engine block is an integrated security core and provides a comprehensive security infrastructure that enables system wide protection that includes use cases inside and outside the device.
 
 Function features are shown in below table.
-
 |image3|
 
 3. Wi-Fi Subsystem Descriptions

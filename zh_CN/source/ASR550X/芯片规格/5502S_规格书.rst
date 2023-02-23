@@ -674,7 +674,7 @@ ASR5502S Pin Descriptions
 
 Take ASR5502S as an example, the reference PCB design is shown in following diagram.
 
-The chip is powered by single supply input "VCC" with range from 3.3~5 V. The inside PMU can generate 1.2/1.8/3.3 V voltage for the core function circuits and digital IO voltage. There is no need of other PMU IC, but just total 9 passive LC devices.
+The chip is powered by single supply input "VCC" with range from 3.3~5 V. The inside PMU can generate 1.2/1.8 V voltage for the core function circuits, and 3.3 V for the digital IO. It should be noted that 3.3 V voltage is generated for DIG_PAD_12/13 and PAD_RSTN/PAD_SEL IO pins by default. There is no need of other PMU IC, but just total 9 passive LC devices.
 
 |image10|
 

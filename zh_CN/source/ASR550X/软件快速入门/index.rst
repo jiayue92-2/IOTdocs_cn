@@ -17,6 +17,6 @@ ASR550X 软件快速入门
     ASR5502X Series Peripheral Application Notes<https://pan.baidu.com/s/1cFuZYncZNZKPVpnuRHW_UQ?pwd=lbi9>
     ASR5505S SDIO 方案介绍<https://pan.baidu.com/s/1hersyIriNqPmpTfRKJMHaw?pwd=57bv>
     ASR5505S 驱动移植和使用指南<https://pan.baidu.com/s/1O9rf8U8rDkA9lmmdP-RD7w?pwd=grwr>
-    ASR5505S 拉距吞吐测试报告<https://pan.baidu.com/s/1kHecmvrVBFaHzNj_uXxAiA?pwd=h36u>
-    ASR5505S 吞吐率测试报告<https://pan.baidu.com/s/13kyZrMSuF6uF5J41Eme5YQ?pwd=mtbs>
+    ASR5505S 拉距吞吐测试报告<5505S_拉锯吞吐率测试报告>
+    ASR5505S 吞吐率测试报告<5505S_吞吐率测试报告>
    

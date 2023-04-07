@@ -95,5 +95,5 @@ LPWAN 芯片
 -  官网：http://www.asrmicro.com/
 
 有关ASR的更多内容，详情可见：
-ASR宣传手册<https://pan.baidu.com/s/1LQW9pphyoeTBA9VFL69Jag?pwd=6h9j>
+    ASR宣传手册 <https://pan.baidu.com/s/1LQW9pphyoeTBA9VFL69Jag?pwd=6h9j>
 

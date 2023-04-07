@@ -94,5 +94,5 @@ LPWAN 芯片
 -  地址：上海市浦东新区张江高科技园区 科苑路399号10幢9层
 -  官网：http://www.asrmicro.com/
 
-有关ASR的更多内容，详情可见`ASR宣传手册 <https://pan.baidu.com/s/1LQW9pphyoeTBA9VFL69Jag?pwd=6h9j>`_ 。
+有关ASR的更多内容，详情可见 `ASR宣传手册 <https://pan.baidu.com/s/1LQW9pphyoeTBA9VFL69Jag?pwd=6h9j>`_ 。
 

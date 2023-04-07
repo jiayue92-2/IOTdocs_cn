@@ -1,9 +1,0 @@
-ASR5502X 系列高低温射频性能测试报告
-=======================
-`English <https://asriot.readthedocs.io/en/latest/ASR550X/Quick-Start/index.html>`_
-
-
-.. toctree::
-   :maxdepth: 2
-
-    ASR5502X 系列 高低温射频性能测试报告<https://pan.baidu.com/s/1VCbH789-ncUVbPJRW6Nczw?pwd=8bzd>

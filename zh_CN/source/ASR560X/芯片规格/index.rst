@@ -1,6 +1,6 @@
 ASR560X 芯片规格
 =======================
-
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/Datasheet/index.html>`_
 
 .. toctree::
    :maxdepth: 2

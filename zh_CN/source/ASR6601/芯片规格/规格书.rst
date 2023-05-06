@@ -15,9 +15,9 @@ The product models corresponding to this document are as follows.
 +-----------+--------+-------+-----------------------------+---------------+---------------+
 | Model     | Flash  | SRAM  | Core                        | Package       | Frequency     |
 +===========+========+=======+=============================+===============+===============+
-| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM STAR      | QFN68, 8*8 mm | 150 ~ 960 MHz |
+| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR-MC1      | QFN68, 8*8 mm | 150 ~ 960 MHz |
 +-----------+--------+-------+-----------------------------+---------------+---------------+
-| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM STAR      | QFN48, 6*6 mm | 150 ~ 960 MHz |
+| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR-MC1      | QFN48, 6*6 mm | 150 ~ 960 MHz |
 +-----------+--------+-------+-----------------------------+---------------+---------------+
 
 **Copyright Notice**
@@ -53,7 +53,7 @@ All liability, including liability for infringement of any proprietary rights ca
 1.1 General
 ~~~~~~~~~~~
 
-ASR6601 is a general LPWAN Wireless Communication SoC, with integrated RF Transceiver, Modem and a 32-bit RISC MCU. The MCU uses ARM STAR, with 48 MHz operation frequency. The RF Transceiver has continuous frequency coverage from 150 MHz to 960 MHz. The Modem supports LoRa modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. The Modem also supports BPSK modulation in TX and (G)MSK modulation in TX and RX. The LPWAN Wireless Communication Module designed with ASR6601 provides ultra-long range and ultra-low power communication for LPWAN application.
+ASR6601 is a general LPWAN Wireless Communication SoC, with integrated RF Transceiver, Modem and a 32-bit RISC MCU. The MCU uses ARM China STAR-MC1, with 48 MHz operation frequency. The RF Transceiver has continuous frequency coverage from 150 MHz to 960 MHz. The Modem supports LoRa modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. The Modem also supports BPSK modulation in TX and (G)MSK modulation in TX and RX. The LPWAN Wireless Communication Module designed with ASR6601 provides ultra-long range and ultra-low power communication for LPWAN application.
 
 ASR6601 can achieve a high sensitivity to -148 dBm and the maximum transmit power is up to +22 dBm. This makes the chip suitable to be used in long range LPWAN and have high efficiency. The total chip package is of very small size, QFN 6 mm x 6 mm/QFN 8 mm x 8 mm.
 
@@ -80,7 +80,7 @@ ASR6601 can achieve a high sensitivity to -148 dBm and the maximum transmit powe
 
 -  4 x GPtimer, 2 x Basic Timer, 2 x LP timer and 1 x Sys Ticker
 
--  48 MHz ARM STAR CPU
+-  48 MHz  Arm China STAR-MC1 CPU
 
 -  4-channel DMA engine x 2
 

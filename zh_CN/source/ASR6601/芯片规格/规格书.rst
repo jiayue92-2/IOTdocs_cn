@@ -238,21 +238,12 @@ RF Input Power              Pin              +10  dBm
 3.2 Recommended Operating Range
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
-
-   <center>
-
 ============== ====== ==== ==== ==== ====
 Parameter      Symbol Min. Typ. Max. Unit
 ============== ====== ==== ==== ==== ====
 Supply Voltage VDD    1.7  3.3  3.7  V
 RF Input Power Pin              +10  dBm
 ============== ====== ==== ==== ==== ====
-
-.. raw:: html
-
-   </center>
-
 
 3.3 TRX Performance
 ~~~~~~~~~~~~~~~~~~~

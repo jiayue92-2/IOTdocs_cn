@@ -1,5 +1,6 @@
 ASR560X 烧录工具介绍
 =======================
+`English <https://asriot.readthedocs.io/en/latest/ASR550X/Download Tool/index.html>`_
 
 
 .. toctree::

@@ -39,7 +39,7 @@ ASR560X
 .. |认证| image:: ../img/09.png
 .. _认证: 认证/index.html
 
-.. |测试报告及指南| image:: ../img/09.png
+.. |测试报告及指南| image:: ../img/11.png
 .. _测试报告及指南: 测试报告及指南/index.html
 
 

@@ -1,6 +1,6 @@
 ASR6601 测试报告及指南
 =======================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Test Report&Guide/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Test Report and Guide/index.html>`_
 
 
 .. toctree::

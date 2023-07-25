@@ -71,7 +71,6 @@ LPWAN 芯片
    ASR560X/软件快速入门/index
    ASR560X/常见问题/index
    ASR560X/认证/index
-   ASR560X/测试报告及指南/index
    
 .. toctree::
    :hidden:
@@ -95,4 +94,3 @@ LPWAN 芯片
 -  官网：http://www.asrmicro.com/
 
 有关ASR公司以及IoT BU产品的更多内容，详情可见 `ASR宣传手册 <https://pan.baidu.com/s/1j6jhmgHhKgO68KgCg7gDlQ?pwd=bl6f>`_ 。
-

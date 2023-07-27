@@ -39,6 +39,9 @@ ASR560X
 .. |认证| image:: ../img/09.png
 .. _认证: 认证/index.html
 
+.. |测试报告| image:: ../img/11.png
+.. _测试报告: 测试报告/index.html
+
 
 .. toctree::
    :hidden:
@@ -57,7 +60,8 @@ ASR560X
    ASR560X/软件快速入门/index
    ASR560X/常见问题/index
    ASR560X/认证/index
-   
+   ASR550X/测试报告/index
+
 .. toctree::
    :hidden:
    :caption: ASR6601
@@ -69,3 +73,4 @@ ASR560X
    ASR6601/软件快速入门/index
    ASR6601/常见问题/index
    ASR6601/认证/index
+   ASR6601/测试报告/index

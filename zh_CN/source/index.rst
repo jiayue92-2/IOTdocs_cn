@@ -71,7 +71,8 @@ LPWAN 芯片
    ASR560X/软件快速入门/index
    ASR560X/常见问题/index
    ASR560X/认证/index
-   
+   ASR550X/测试报告及指南/index
+
 .. toctree::
    :hidden:
    :caption: ASR6601

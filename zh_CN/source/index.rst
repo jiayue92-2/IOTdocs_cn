@@ -58,7 +58,7 @@ LPWAN 芯片
    ASR550X/软件快速入门/index
    ASR550X/常见问题/index
    ASR550X/认证/index
-   ASR550X/测试报告及指南/index
+   ASR550X/测试报告/index
 
 .. toctree::
    :hidden:
@@ -71,7 +71,7 @@ LPWAN 芯片
    ASR560X/软件快速入门/index
    ASR560X/常见问题/index
    ASR560X/认证/index
-   ASR550X/测试报告及指南/index
+   ASR550X/测试报告/index
 
 .. toctree::
    :hidden:
@@ -84,7 +84,7 @@ LPWAN 芯片
    ASR6601/软件快速入门/index
    ASR6601/常见问题/index
    ASR6601/认证/index
-   ASR6601/测试报告及指南/index
+   ASR6601/测试报告/index
 
 
 **联系我们：**\

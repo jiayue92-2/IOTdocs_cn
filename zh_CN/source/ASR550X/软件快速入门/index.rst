@@ -8,7 +8,7 @@ ASR550X 软件快速入门
 
     ASR5502X 系列 FreeRTOS 平台快速入门指南<ASR5502X系列_FreeRTOS平台_快速入门指南>
     ASR5502X 系列 FreeRTOS 平台开发指南<ASR5502X系列_FreeRTOS平台_开发指南>
-    ASR550X 系列 FreeRTOS 平台 AT 命令使用指南<https://pan.baidu.com/s/1s6GxHBSkvZ9d9qkEDkls5g?pwd=vbu6>
+    ASR5502X 系列 FreeRTOS 平台 AT 命令使用指南<https://pan.baidu.com/s/18qY1OLFAjzetsT_MUE7-mg?pwd=fjco>
     ASR5502X 系列 FreeRTOS 平台外设 Demo 用户手册<https://pan.baidu.com/s/1XH_cVgAl9ATbGI82Oqm6YQ?pwd=jpxr>
     ASR5502X 系列 FreeRTOS 平台软件（Wi-Fi 部分）使用手册<https://pan.baidu.com/s/1aKy2SE22qNR22TD336nrKg?pwd=43o0>
     ASR5502X 系列 OTA 功能开发指导<https://pan.baidu.com/s/1oYKKF_ccwEKgHdPzehDbWA?pwd=wobe>
@@ -17,6 +17,4 @@ ASR550X 软件快速入门
     ASR5502X Series Peripheral Application Notes<https://pan.baidu.com/s/1cFuZYncZNZKPVpnuRHW_UQ?pwd=lbi9>
     ASR5505S SDIO 方案介绍<https://pan.baidu.com/s/1hersyIriNqPmpTfRKJMHaw?pwd=57bv>
     ASR5505S 驱动移植和使用指南<https://pan.baidu.com/s/1O9rf8U8rDkA9lmmdP-RD7w?pwd=grwr>
-    ASR5505S 拉距吞吐测试报告<5505S_拉锯吞吐率测试报告>
-    ASR5505S 吞吐率测试报告<5505S_吞吐率测试报告>
    

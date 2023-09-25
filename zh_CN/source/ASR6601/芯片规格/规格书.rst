@@ -12,17 +12,17 @@ This document introduces the specifications of LPWAN SoC ASR6601.
 
 The product models corresponding to this document are as follows.
 
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| Model     | Flash  | SRAM  | Core                             | Package       | Frequency     |
-+===========+========+=======+==================================+===============+===============+
-| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| ASR6601SER | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| ASR6601CBR | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
++------------+--------+-------+----------------------------------+---------------+---------------+
+| Model      | Flash  | SRAM  | Core                             | Package       | Frequency     |
++============+========+=======+==================================+===============+===============+
+| ASR6601SE  | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CB  | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601SER | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CBR | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
 
 **Copyright Notice**
 
@@ -167,7 +167,7 @@ There are four part numbers of ASR6601: ASR6601CB, ASR6601CBR, ASR6601SE, and AS
 
 |image2|
 
-.. attention::
+.. note:: 
     1. Compared to the ASR6601SE (ASR6601CB), the new part number ASR6601SER (ASR6601CBR) changes only in the RSTN pin function; the RSTN pin number remains the same. All other pins are the same as those of previous part numbers.
     2. For the ASR6601SER (ASR6601CBR), the reset signal on the RSTN pin only resets main domain, and the Aon domain and Aonr domain keeps running. For the ASR6601SE (ASR6601CB), the reset signal on the RSTN pin will restart the whole chip, with the same function as power-on reset. As for the definition of the main domain, the Aon domain and the Aonr domain, please refer to Section 4.2: Power Supply Architecture in ASR6601 Reference Manual.
     3. For the software reference design, the ASR6601SER (ASR6601CBR) can only be supported by the SDK v2.0.0 or the later versions. For more details, please refer to the SDK release note.
@@ -265,7 +265,7 @@ RF Input Power Pin              +10  dBm
 
 |image5|
 
-.. note::
+.. note:: 
     - IDD_Standby and IDD_Stop3 are tested at 25 degrees and the RCO32K is used as the RTC clk.
 
     - The XO32K block operates either in its normal mode or low-power mode. Through the proper design of XO32K PCB routing, the XO32K can work in its low-power mode, and in this case, the IDD current with the XO32K clk is as low as that with the RCO32K clk. For more details, please refer to ASR6601 Hardware Design Guide. Otherwise, the XO32K block shall only work in the normal mode, and the current will increase about 500nA compared with the low-power mode.
@@ -287,7 +287,7 @@ With a slow rise or fall of the signal on the NRST pin when the VBAT is ready, a
 
 |image7|
 
-.. note::
+.. note:: 
     - The parallel resistance value is recommended to be 4.7K~10K, and the parallel capacitance value is recommended to be 300pF~10nF. 
 
     - Different VDD power-on timings and unwanted reset timing must be avoided, or risks will arise. For more details, please refer to ASR6601 Hardware Design Guide.
@@ -297,7 +297,7 @@ The RSTN is controlled by an external switch or one GPIO from other MCU, which c
 
 |image8|
 
-.. note::
+.. note:: 
     - If MCU GPIO is configured to open drain output mode, the serial resistor may not be used, but the pull-up resistor is a must, otherwise the high RSTN will be HIZ.
 
     - ASR6601SER (ASR6601CBR) can only be supported by the SDK v2.0.0 or the later versions. For more details, please refer to the SDK release note.

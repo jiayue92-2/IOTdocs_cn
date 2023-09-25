@@ -19,6 +19,10 @@ The product models corresponding to this document are as follows.
 +-----------+--------+-------+----------------------------------+---------------+---------------+
 | ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
 +-----------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601SER | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++-----------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CBR | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++-----------+--------+-------+----------------------------------+---------------+---------------+
 
 **Copyright Notice**
 
@@ -43,7 +47,7 @@ All liability, including liability for infringement of any proprietary rights ca
 ======= ======= ==================
 Date    Version Release Notes
 ======= ======= ==================
-2023.04 V1.6.0  Updated Table 3-4.
+2023.09 V1.7.0  Added chip models of ASR6601SER and ASR6601CBR and Section 3.6: RSTN Characteristics.
 ======= ======= ==================
 
 1. Overview
@@ -159,10 +163,15 @@ ASR6601 LPWAN chip enables new generation of IoT applications.
 1.6 Part Number Information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The key feature differences between two parts number of ASR6601 are list below, ASR6601SE can support more analog functions with more GPIOs.
+There are four part numbers of ASR6601: ASR6601CB, ASR6601CBR, ASR6601SE, and ASR6601SER. The key feature differences between two parts numberamong the four part numbers of ASR6601 are listlisted below,. ASR6601SE and ASR6601SER can support more analog functions with more GPIOs.
 
 |image2|
 
+.. attention::
+    1. Compared to the ASR6601SE (ASR6601CB), the new part number ASR6601SER (ASR6601CBR) changes only in the RSTN pin function; the RSTN pin number remains the same. All other pins are the same as those of previous part numbers.
+    2. For the ASR6601SER (ASR6601CBR), the reset signal on the RSTN pin only resets main domain, and the Aon domain and Aonr domain keeps running. For the ASR6601SE (ASR6601CB), the reset signal on the RSTN pin will restart the whole chip, with the same function as power-on reset. As for the definition of the main domain, the Aon domain and the Aonr domain, please refer to Section 4.2: Power Supply Architecture in ASR6601 Reference Manual.
+    3. For the software reference design, the ASR6601SER (ASR6601CBR) can only be supported by the SDK v2.0.0 or the later versions. For more details, please refer to the SDK release note.
+ 
 
 2. System Description
 ---------------------
@@ -222,7 +231,7 @@ The boot mode can be configured by the levels of BOOT0 pin and the data in the F
 3. Electrical Characteristics
 -----------------------------
 
-Electrical Characteristics include *absolute maximum rating*, *power consumption characteristics* and *recommended operating range* for the SoC and module.
+Electrical Characteristics include *absolute maximum rating*, *recommended operating range*, *TRX performance*, *power consumption characteristics*, *ESD ratings* and *RSTN characteristics* for the SoC and module.
 
 3.1 Absolute Maximum Rating
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -257,9 +266,11 @@ RF Input Power Pin              +10  dBm
 |image5|
 
 .. note::
-    - IDD_Standby and IDD_Stop3 are tested at 25 degrees and the RCO32K is used as the RTC clk.\
+    - IDD_Standby and IDD_Stop3 are tested at 25 degrees and the RCO32K is used as the RTC clk.
 
-    - The XO32K block operates either in its normal mode or low-power mode. Through the proper design of XO32K PCB routing, the XO32K can work in its low-power mode, and in this case, the IDD current with the XO32K clk is as low as that with the RCO32K clk. For more details, please refer to ASR6601_Harware Design Guide_V1.3.0. Otherwise, the XO32K block shall only work in the normal mode, and the current will increase about 500nA compared with the low-power mode.
+    - The XO32K block operates either in its normal mode or low-power mode. Through the proper design of XO32K PCB routing, the XO32K can work in its low-power mode, and in this case, the IDD current with the XO32K clk is as low as that with the RCO32K clk. For more details, please refer to ASR6601 Hardware Design Guide. Otherwise, the XO32K block shall only work in the normal mode, and the current will increase about 500nA compared with the low-power mode.
+
+    - SoC Core Supply Current refers to the power consumption of the Arm China STAR-MC1 processor and SoC TRX Supply Current refers to the power consumption of the LPWAN RF Transceiver.
 
 
 3.5 ESD Ratings
@@ -268,13 +279,48 @@ RF Input Power Pin              +10  dBm
 |image6|
 
 
+3.6 RSTN Characteristics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For ASR6601CB/ASR6601SE RSTN, the reset signal on RSTN pin restarts the whole chip including the main domain, the Aon domain and the Aonr domain, with the function as power-on reset.
+With a slow rise or fall of the signal on the NRST pin when the VBAT is ready, a particular unwanted internal reset timing is generated, which will make the chip enter safe mode and erase the flash. The reference design of NRST is as below,
+
+|image7|
+
+.. note::
+    - The parallel resistance value is recommended to be 4.7K~10K, and the parallel capacitance value is recommended to be 300pF~10nF. 
+
+    - Different VDD power-on timings and unwanted reset timing must be avoided, or risks will arise. For more details, please refer to ASR6601 Hardware Design Guide.
+
+For ASR6601CBR/ASR6601SER RSTN, the reset signal on RSTN pin only resets the main domain, which is different from the ASR6601CB/ASR6601SE RSTN. 
+The RSTN is controlled by an external switch or one GPIO from other MCU, which can be configured to open drain output mode or push pull output mode. The reference design of RSTN pin is as below:
+
+|image8|
+
+.. note::
+    - If MCU GPIO is configured to open drain output mode, the serial resistor may not be used, but the pull-up resistor is a must, otherwise the high RSTN will be HIZ.
+
+    - ASR6601SER (ASR6601CBR) can only be supported by the SDK v2.0.0 or the later versions. For more details, please refer to the SDK release note.
+
+
 4. Package and Pin Definition
 -----------------------------
 
 4.1 ASR6601SE QFN68
 ~~~~~~~~~~~~~~~~~~~
 
-4.1.1 ASR6601SE QFN68 Pin Definition
+Below are two models of the ASR6601 in QFN68 package, which share the same pin definition, pin assignment and mechanical parameters.
+
++------------+-----------+----------+----------------------------------+---------------+---------------+
+| **Model**  | **Flash** | **SRAM** | **Processor**                    | **Package**   | Frequency     |
++============+===========+==========+==================================+===============+===============+
+| ASR6601SE  | 256 KB    | 64 KB    | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+-----------+----------+----------------------------------+---------------+---------------+
+| ASR6601SER | 256 KB    | 64 KB    | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+-----------+----------+----------------------------------+---------------+---------------+
+
+
+4.1.1 ASR6601 QFN68 Pin Definition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +---------+--------------+----------+----------------------------------------------------+------------------+
@@ -417,21 +463,32 @@ RF Input Power Pin              +10  dBm
 | 68      | RFO          | IO       | RF transmitter output                              | 3.3              |
 +---------+--------------+----------+----------------------------------------------------+------------------+
 
-4.1.2 ASR6601SE QFN68 Pin Assignment
+4.1.2 ASR6601 QFN68 Pin Assignment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image7|
+|image9|
 
-4.1.3 ASR6601SE QFN68 Mechanical Parameters
+4.1.3 ASR6601 QFN68 Mechanical Parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image8|
+|image10|
 
 
-4.2 ASR6601CB QFN48
+4.2 ASR6601 QFN48
 ~~~~~~~~~~~~~~~~~~~
 
-4.2.1 ASR6601CB QFN48 Pin Definition
+Below are two models of the ASR6601 in QFN48 package, which share the same pin definition, pin assignment and mechanical parameters.
+
++------------+-----------+----------+----------------------------------+---------------+---------------+
+| **Model**  | **Flash** | **SRAM** | **Processor**                    | **Package**   | Frequency     |
++============+===========+==========+==================================+===============+===============+
+| ASR6601CB  | 128 KB    | 16 KB    | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+-----------+----------+----------------------------------+---------------+---------------+
+| ASR6601CBR | 128 KB    | 16 KB    | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+-----------+----------+----------------------------------+---------------+---------------+
+
+
+4.2.1 ASR6601 QFN48 Pin Definition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +---------+-----------+----------+----------------------------------------------------+------------------+
@@ -534,15 +591,15 @@ RF Input Power Pin              +10  dBm
 | 48      | RFO       | IO       | RF transmitter output                              | 3.3              |
 +---------+-----------+----------+----------------------------------------------------+------------------+
 
-4.2.2 ASR6601CB QFN48 Pin Assignment
+4.2.2 ASR6601 QFN48 Pin Assignment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image9|
+|image11|
 
-4.2.3 ASR6601CB QFN48 Mechanical Parameters
+4.2.3 ASR6601 QFN48 Mechanical Parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image10|
+|image12|
 
 
 4.3 GPIO Function MUX Table
@@ -693,7 +750,9 @@ GPIO62   GPIO_PORTD_14 LPTIM_IN2   LPUART_RX  LPTIM_ETR
 .. |image4| image:: ../../img/6601_规格书/表3-3.png
 .. |image5| image:: ../../img/6601_规格书/表3-4.png
 .. |image6| image:: ../../img/6601_规格书/表3-5.png
-.. |image7| image:: ../../img/6601_规格书/图4-1.png
-.. |image8| image:: ../../img/6601_规格书/图4-2.png
-.. |image9| image:: ../../img/6601_规格书/图4-3.png
-.. |image10| image:: ../../img/6601_规格书/图4-4.png
+.. |image7| image:: ../../img/6601_规格书/图3-1.png
+.. |image8| image:: ../../img/6601_规格书/图3-2.png
+.. |image9| image:: ../../img/6601_规格书/图4-1.png
+.. |image10| image:: ../../img/6601_规格书/图4-2.png
+.. |image11| image:: ../../img/6601_规格书/图4-3.png
+.. |image12| image:: ../../img/6601_规格书/图4-4.png

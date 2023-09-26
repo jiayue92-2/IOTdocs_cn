@@ -122,7 +122,6 @@ The following figure shows the block diagram of ASR6601 SoC and ASR6601 LPWAN Mo
 
 |image1|
 
-
 1.4 Specification
 ~~~~~~~~~~~~~~~~~
 
@@ -227,6 +226,7 @@ The boot mode can be configured by the levels of BOOT0 pin and the data in the F
 -  DebugLevel, UseFlashBoot0, FlashBoot0 and FlashBoot1 is the information area of the Flash, they can be modified according to the application. MainFlashEmpty is determined by the data of address 0 in the flash Main area. If the data in the address 0 of Flash Main area is 0xFFFFFFFF, the value of MainFlashEmpty is 1, otherwise the value of MainFlashEmpty is 0. BOOT0 pin is GPIO02 in the package.
 
 -  The boot mode is selected according to the configurations when the system is in these status: first powered up, exit the Standby mode or reset.
+
 
 3. Electrical Characteristics
 -----------------------------

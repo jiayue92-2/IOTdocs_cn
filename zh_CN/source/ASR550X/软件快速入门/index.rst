@@ -17,9 +17,9 @@ ASR550X 软件快速入门
     ASR5502X Series Peripheral Application Notes<https://pan.baidu.com/s/1cFuZYncZNZKPVpnuRHW_UQ?pwd=lbi9>
     ASR5505S SDIO 方案介绍<https://pan.baidu.com/s/1hersyIriNqPmpTfRKJMHaw?pwd=57bv>
     ASR5505S Wi-Fi 驱动移植和使用指南<https://pan.baidu.com/s/1dcL_yuX0FQxQuLRCR8a2Ow?pwd=aa5m>
-    ASR IoT 系列_开发板使用指南<https://pan.baidu.com/s/19gppvT476zORyXiH1BZcGg?pwd=2e33>
     ASR5502X&ASR5822X 系列_J-Link + GDB调试方法<https://pan.baidu.com/s/1RRre6-xioUaVcf-NS9C_KQ?pwd=ff6z>
+    ASR 透传系列_树莓派环境搭建指南<https://pan.baidu.com/s/1T5IY22EJq9CxkS5zVWs_pg?pwd=3kdk>
+    ASR IoT 系列_开发板使用指南<https://pan.baidu.com/s/19gppvT476zORyXiH1BZcGg?pwd=2e33>
     ASR IoT 系列_Flash 加密及安全启动使用指南<https://pan.baidu.com/s/1B5dx5V-aj4CmXEQTsq4Big?pwd=1jdb>
     ASR IoT Series_RTOS Application Notes<https://pan.baidu.com/s/1IBmqkkReErrcaz0nXqr85w?pwd=wlv9>
     ASR IoT Series_Security Application Notes<https://pan.baidu.com/s/1wYEiz36GQOPbdHrP2LNuVA?pwd=dn0u>
-   

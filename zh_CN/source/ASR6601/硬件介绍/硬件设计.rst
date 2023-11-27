@@ -174,7 +174,7 @@ ASR6601CB/ASR6601SE 复位电路
     1.	ASR6601CB 和 ASR6601SE 的 RSTN 只能作为输入，不能作为输出。
     2.	RSTN 处推荐加 RC 电路，其中上拉电阻取值范围推荐 4.7K~10K, 电容的取值范围为 300 pF~10 nF，推荐使用 330 pF。
     3.	RSTN 处的电容 C 的值不宜过大，如果增大到 uF 量级，RSTN 的波形过缓会触发芯片内部的保护机制，从而导致芯片位于 flash info 区的 bootloader 擦除。
-    4.	确保上拉电阻的电源和芯片同时上电，如果芯片先上电，上拉电阻后上电，RSTN 信号过缓会触发芯片内部的保护机制，从而导致芯片位于 flash info 区的 bootloader 擦除。
+    4.	确保上拉电阻的电源和芯片同时上电，如果芯片先上电，上拉电阻后上电，RSTN信号处于中间电平会触发芯片内部的保护机制，从而导致芯片位于flash info区的bootloader擦除
     5.	强烈建议新的 VDDD，VDDA，VDD_RF 接到同一个电源，避免优化不同电源时序不同，使 RSTN 的电平处于中间电平，从而触发芯片内部的保护机制，导致芯片 flash bootloader 部分擦除。
     6.	关于 ASR6601 烧录方法以及 flash bootloader 擦除问题，详情请参考 ASR6601 官方 FTP: 5_ASR6601_CTM_Q&A/51_ASR6601_ 烧录问题汇总。
 

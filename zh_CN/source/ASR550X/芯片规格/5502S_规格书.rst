@@ -132,7 +132,7 @@ The following table gives ASR550X part number information (Note that the number 
 
 -  **Security**
 
-   -  ARM TrustZone , CryptoCell 310 Security Engine
+   -  CryptoCell 310 Security Engine
    -  AES/RSA/ECC/MAC/HMAC/SHA1/SHA-224/SHA256/SHA512/D-H library
    -  True Random Number Generator (TRNG)/PRNG
    -  Flash Image Integrated Encryption/Decryption

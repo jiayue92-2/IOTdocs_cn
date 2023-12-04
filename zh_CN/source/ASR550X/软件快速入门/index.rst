@@ -11,7 +11,6 @@ ASR550X 软件快速入门
     ASR5502X 系列 FreeRTOS 平台 AT 命令使用指南<https://pan.baidu.com/s/17FYx1C0AqGzoy28qdOGY1w?pwd=dtfd>
     ASR5502X 系列 FreeRTOS 平台外设 Demo 用户手册<https://pan.baidu.com/s/1XH_cVgAl9ATbGI82Oqm6YQ?pwd=jpxr>
     ASR5502X 系列 FreeRTOS 平台软件（Wi-Fi 部分）使用手册<https://pan.baidu.com/s/1aKy2SE22qNR22TD336nrKg?pwd=43o0>
-    ASR5502X 系列 OTA 功能开发指导<https://pan.baidu.com/s/1oYKKF_ccwEKgHdPzehDbWA?pwd=wobe>
     ASR5502X 系列 FreeRTOS 平台公有云用户手册<https://pan.baidu.com/s/1Xv8YGpcO4aCkBppYkVNvXA?pwd=fs3c>
     ASR5502X 系列 FreeRTOS 平台私有云用户手册<https://pan.baidu.com/s/1x3g9GxX9SX1TxPYo88hJIQ?pwd=e5zz>
     ASR5502X Series Peripheral Application Notes<https://pan.baidu.com/s/1cFuZYncZNZKPVpnuRHW_UQ?pwd=lbi9>
@@ -19,6 +18,8 @@ ASR550X 软件快速入门
     ASR5505S Wi-Fi 驱动移植和使用指南<https://pan.baidu.com/s/1dcL_yuX0FQxQuLRCR8a2Ow?pwd=aa5m>
     ASR5502X&ASR5822X 系列_J-Link + GDB调试方法<https://pan.baidu.com/s/1RRre6-xioUaVcf-NS9C_KQ?pwd=ff6z>
     ASR 透传系列_树莓派环境搭建指南<https://pan.baidu.com/s/1T5IY22EJq9CxkS5zVWs_pg?pwd=3kdk>
+    ASR透传系列_使用DOGO工具烧录ate_sram说明<https://pan.baidu.com/s/11NWD-9glQZUhJAIpzMbDNQ?pwd=206z>
+    ASR IoT 系列_OTA 功能开发指导<https://pan.baidu.com/s/1GBNULlGdmDylgsj-omVJGQ?pwd=6n9j>
     ASR IoT 系列_开发板使用指南<https://pan.baidu.com/s/19gppvT476zORyXiH1BZcGg?pwd=2e33>
     ASR IoT 系列_Flash 加密及安全启动使用指南<https://pan.baidu.com/s/1B5dx5V-aj4CmXEQTsq4Big?pwd=1jdb>
     ASR IoT Series_RTOS Application Notes<https://pan.baidu.com/s/1IBmqkkReErrcaz0nXqr85w?pwd=wlv9>

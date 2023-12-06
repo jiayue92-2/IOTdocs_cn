@@ -59,7 +59,7 @@ Homepage: http://www.asrmicro.com/
 ======= ======= ===================================================
 Date    Version Release Notes
 ======= ======= ===================================================
-2023.02 V2.7.2  Updated Chapter 7.
+2023.12 V2.8.0  Added Section 5.3 and Section 5.4; Updated Section 1.3, Section 5.1 and Section 5.2.
 ======= ======= ===================================================
 
 1. Overview
@@ -533,6 +533,31 @@ The Software Architecture is as below:
 5.1 Absolute Maximum Rating
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
++------------------------------------------------+-----------+------+------+------+------+
+| Parameter                                      | Symbol    | Min. | Typ. | Max. | Unit |
++================================================+===========+======+======+======+======+
+| Power supply                                   | VBAT_DCDC | -0.3 |      | 5.8  | V    |
++------------------------------------------------+-----------+------+------+------+------+
+| Storage temperature range                      | TSTR      | -55  |      | 150  | °C   |
++------------------------------------------------+-----------+------+------+------+------+
+| Operating temperature range (Industrial Grade) | TOPR      | -40  |      | 85   | °C   |
++------------------------------------------------+-----------+------+------+------+------+
+
+5.2 Recommended Operating Conditions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++------------------------------------------------+-----------+------+-------+------+------+
+| Parameter                                      | Symbol    | Min. | Typ.  | Max. | Unit |
++================================================+===========+======+=======+======+======+
+| Power supply                                   | VBAT_DCDC | 3    | 3.6/5 | 5.2  | V    |
++------------------------------------------------+-----------+------+-------+------+------+
+| Operating temperature range (Industrial Grade) | TOPR      | -40  | -     | 85   | °C   |
++------------------------------------------------+-----------+------+-------+------+------+
+
+
+5.1 Absolute Maximum Rating
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 =========================== ========= ==== ==== ==== ====
 Parameter                   Symbol    Min. Typ. Max. Unit
 =========================== ========= ==== ==== ==== ====
@@ -551,6 +576,24 @@ Power supply                VBAT_DCDC 3    3.6 or 5 5.2  V
 Operating temperature range TOPR      -40           85   °C
 =========================== ========= ==== ======== ==== ====
 
+5.3 ESD Ratings
+
+|image8|
+
+5.4 Crystal Specifications
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+===================== ======== ======== ======== ========
+**Parameter**         **Min.** **Typ.** **Max.** **Unit**
+===================== ======== ======== ======== ========
+Fundamental frequency -        26       -        MHz
+Frequency tolerance   -10               10       ppm
+Operating temperature -30               85       °C
+Load capacitor        -        7.5      -        pF
+Maximum ESR           -        50       -        Ω
+Aging per year        -3                3        ppm
+===================== ======== ======== ======== ========
+
 6. Package Specifications
 -------------------------
 
@@ -559,14 +602,14 @@ Operating temperature range TOPR      -40           85   °C
 
 ASR5502S uses 5 mm x 5 mm QFN package of 40 pin with 0.4 mm pitch.
 
-|image8|
+|image9|
 
 6.2 QFN40 Pin Assignment and Description
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The chip top view and pin descriptions of ASR5502S are shown as follows.
 
-|image9|
+|image10|
 
 .. raw:: html
 
@@ -676,7 +719,7 @@ Take ASR5502S as an example, the reference PCB design is shown in following diag
 
 The chip is powered by single supply input "VCC" with range from 3.3~5 V. The inside PMU can generate 1.2/1.8 V voltage for the core function circuits, and 3.3 V for the digital IO. It should be noted that 3.3 V voltage is generated for DIG_PAD_12/13 and PAD_RSTN/PAD_SEL IO pins by default. There is no need of other PMU IC, but just total 9 passive LC devices.
 
-|image10|
+|image11|
 
 
 .. |image1| image:: ../../img/5502S_规格书/图1-1.png
@@ -686,6 +729,7 @@ The chip is powered by single supply input "VCC" with range from 3.3~5 V. The in
 .. |image5| image:: ../../img/5502S_规格书/表3-2.png
 .. |image6| image:: ../../img/5502S_规格书/图4-1.png
 .. |image7| image:: ../../img/5502S_规格书/图4-2.png
-.. |image8| image:: ../../img/5502S_规格书/图6-1.png
-.. |image9| image:: ../../img/5502S_规格书/图6-2.png
-.. |image10| image:: ../../img/5502S_规格书/图7-1.png
+.. |image8| image:: ../../img/5502S_规格书/表5-3.png
+.. |image9| image:: ../../img/5502S_规格书/图6-1.png
+.. |image10| image:: ../../img/5502S_规格书/图6-2.png
+.. |image11| image:: ../../img/5502S_规格书/图7-1.png

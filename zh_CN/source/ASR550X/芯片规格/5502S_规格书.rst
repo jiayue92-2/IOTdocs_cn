@@ -554,7 +554,6 @@ The Software Architecture is as below:
 | Operating temperature range (Industrial Grade) | TOPR      | -40  | -     | 85   | °C   |
 +------------------------------------------------+-----------+------+-------+------+------+
 
-
 5.1 Absolute Maximum Rating
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

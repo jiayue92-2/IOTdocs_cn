@@ -2,7 +2,7 @@ ASR550X
 =======================
 `English <https://asriot.readthedocs.io/en/latest/ASR550X/index.html>`_
 
-这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 550X 系列产品的文档。您也可以点击 `550X系列文档 <https://pan.baidu.com/s/1ia6WFjqo960-Zt88Yhgyvw?pwd=xlcl>`_ 下载PDF版资料。     
+这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 550X 系列产品的文档。您也可以点击 `550X系列文档 <https://pan.baidu.com/s/1J2PcYw6V1K-BO4FOkeiuPg?pwd=ul5t>`_ 下载PDF版资料。     
 
 ==================  ==================  ==================
 |芯片规格|_         |硬件介绍|_           |烧录工具介绍|_

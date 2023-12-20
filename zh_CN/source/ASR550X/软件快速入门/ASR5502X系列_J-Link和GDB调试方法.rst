@@ -119,7 +119,7 @@ watchpoint，顾名思义，其一般用来观察某个变量/内存地址的状
 
 查看 watchpoint
 
-(gdb)d n
+-  (gdb)d n
 
 删除 watchpoint，同删除 breakpoint 一样
 

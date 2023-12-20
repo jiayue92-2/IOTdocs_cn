@@ -84,7 +84,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 2. ASR量产烧录方案
 ------------------
 
-为了方便客户进行量产烧录，ASR 针对 ASR6601CB 和 ASR6601SE 芯片专门开发了一套量产烧录治具，以及配套的烧录软件 ASR6601MultiProgrammer，最多实现 16 个芯片或者模组同时烧录。本文档主要针对 ASR6601 模组或者 ASR6601 芯片的量产烧录，提供一种可行的解决方案，供客户参考。ASR6601 烧录方案包括如下两个部分：
+为了方便客户进行量产烧录，ASR 针对 ASR6601CB/CBR 和 ASR6601SE/SER 芯片专门开发了一套量产烧录治具，以及配套的烧录软件 ASR6601MultiProgrammer，最多实现 16 个芯片或者模组同时烧录。本文档主要针对 ASR6601 模组或者 ASR6601 芯片的量产烧录，提供一种可行的解决方案，供客户参考。ASR6601 烧录方案包括如下两个部分：
 
 (1) 量产烧录治具
 
@@ -111,9 +111,9 @@ ASR6601 量产烧录治具硬件包括如下几部分：
 
 (1) ASR6601 烧录主板
 
-(2) ASR6601CB 和 ASR6601SE 烧录子板
+(2) ASR6601CB/CBR 和 ASR6601SE/SER 烧录子板
 
-(3) ASR6601CB 和 ASR6601SE 模组拼板
+(3) ASR6601CB/CBR 和 ASR6601SE/SER 模组拼板
 
 .. note:: 所有硬件均可以提供原理图和 layout。
 \
@@ -146,18 +146,18 @@ ASR6601 烧录子板的设计思路：
 
 (2) 烧录子板的设计和模组拼板的设计要对应。
 
-ASR6601CB 烧录子板 Layout 图如下：
+ASR6601CB/CBR 烧录子板 Layout 图如下：
 
 |image5|
 
-ASR6601SE 烧录子板 Layout 图如下：
+ASR6601SE/SER 烧录子板 Layout 图如下：
 
 |image6|
 
 .. note::
-    1. ASR6601CB 烧录子板原理图详情，请参考：asr6601cb_prog_db_v10_230404.pdf。
+    1. ASR6601CB/CBR 烧录子板原理图详情，请参考：asr6601cb_prog_db_v10_230404.pdf。
 
-    2. ASR6601SE 烧录子板原理图详情，请参考：asr6601se_prog_db_v10_230404.pdf。
+    2. ASR6601SE/SER 烧录子板原理图详情，请参考：asr6601se_prog_db_v10_230404.pdf。
 
     3. ASR6601 烧录子板 PCB 板厚要增加，且和插针接触的焊盘沉金厚度要增加。
     
@@ -167,16 +167,16 @@ ASR6601SE 烧录子板 Layout 图如下：
 2.1.2.3 模组拼板
 ^^^^^^^^^^^^^^^^
 
-ASR6601CB 模组的 layout 基于 ASR6601CB Demo Module，模组拼板结构尺寸图如下：
+ASR6601CB/CBR 模组的 layout 基于 ASR6601CB/CBR Demo Module，模组拼板结构尺寸图如下：
 
 |image7|
 
-ASR6601SE 模组的 layout 基于 ASR6601SE Demo Module，模组拼板结构尺寸图如下：
+ASR6601SE/SER 模组的 layout 基于 ASR6601SE/SER Demo Module，模组拼板结构尺寸图如下：
 
 |image8|
 
 .. note::
-    1. 客户自行打样的 ASR6601CB 和 ASR6601SE 的模组与 ASR 的 demo module 可能有会差异，客户按照自己的模组来拼板。无论模组的尺寸如何，如何拼板，模组背面必须引出的测试点有：VDD，GND，RESET，GPIO02，GPIO16，GPIO17。
+    1. 客户自行打样的 ASR6601CB/CBR 和 ASR6601SE/SER 的模组与 ASR 的 demo module 可能有会差异，客户按照自己的模组来拼板。无论模组的尺寸如何，如何拼板，模组背面必须引出的测试点有：VDD，GND，RESET，GPIO02，GPIO16，GPIO17。
 
     2. 烧录子板和模组拼板一一对应， 模组拼板背面的测试点通过探针板和烧录子板连接，如果测试焊盘有偏差，会导致信号无法连接，烧录失败。
 

@@ -95,7 +95,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
 复位命令执行后，程序将停止在 ResetHandler 处。还可以设置其他断点，如 b main、b HardFault_Handler 等。其他 GDB 命令都支持，如图：
 
-|imag4|
+|image4|
 
 3. 使用
 -------

@@ -91,6 +91,6 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
 
 .. |image1| image:: ../../img/550X_使用DOGO烧录ATE/图1-1.png
-.. |image2| image:: ../../img/550X_使用DOGO烧录ATE/图1-2..png
+.. |image2| image:: ../../img/550X_使用DOGO烧录ATE/图1-2.png
 .. |image3| image:: ../../img/550X_使用DOGO烧录ATE/图1-3.png
 .. |image4| image:: ../../img/550X_使用DOGO烧录ATE/图1-4.png

@@ -201,7 +201,7 @@ Step4：点击“烧录”
 .. attention::
     如果需要进入 ATE，但复位后直接进入了 APP 模式，没有在命令行等待 10s，是因为 TAG 已置位，需要先将 TAG 擦除。先让模组进入 only download 状态，再点击 DOGO 工具右边擦除 TAG 按钮，详细操作指南请参考《ASR IoT 芯片_DOGO 烧录调试工具》中第 2.2 章节：TAG 设置功能。
 
- |image9|
+|image9|
 
 3. Lite 开发板
 -------------
@@ -326,7 +326,7 @@ Step4：点击“烧录”即可开始固件烧录
 .. attention::
     如果需要进入 ATE，但复位后直接进入了 APP 模式，没有在命令行等待 10s，是因为 TAG 已置位，需要先将 TAG 擦除。先让模组进入 only download 状态，再点击 DOGO 工具右边擦除 TAG 按钮，详细操作指南请参考《ASR IoT 芯片_DOGO 烧录调试工具》中第 2.2 章节：TAG 设置功能。
 
- |image17|
+|image17|
 
 
 .. |image1| image:: ../../img/ASRIoT系列_开发板使用指南/图1-1.png

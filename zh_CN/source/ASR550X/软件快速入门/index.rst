@@ -20,7 +20,7 @@ ASR550X 软件快速入门
     ASR 透传系列树莓派环境搭建指南<https://pan.baidu.com/s/1T5IY22EJq9CxkS5zVWs_pg?pwd=3kdk>
     ASR 透传系列使用 DOGO 工具烧录 ate_sram 说明<ASR透传系列_使用DOGO工具烧录ate_sram说明>
     ASR IoT 系列 OTA 功能开发指导<https://pan.baidu.com/s/1GBNULlGdmDylgsj-omVJGQ?pwd=6n9j>
-    ASR IoT 系列 开发板使用指南<https://pan.baidu.com/s/19gppvT476zORyXiH1BZcGg?pwd=2e33>
+    ASR IoT 系列 开发板使用指南<ASRIoT系列开发板使用指南>
     ASR IoT 系列 Flash 加密及安全启动使用指南<https://pan.baidu.com/s/1B5dx5V-aj4CmXEQTsq4Big?pwd=1jdb>
     ASR IoT Series RTOS Application Notes<https://pan.baidu.com/s/1IBmqkkReErrcaz0nXqr85w?pwd=wlv9>
     ASR IoT Series Security Application Notes<https://pan.baidu.com/s/1wYEiz36GQOPbdHrP2LNuVA?pwd=dn0u>

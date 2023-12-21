@@ -11,6 +11,7 @@ ASR5502X&ASR5822X 系列 J-Link + GDB 调试方法
 **读者对象**
 
 本文档主要适用于以下工程师：
+
 -  单板硬件开发工程师 
 -  软件工程师
 -  技术支持工程师
@@ -134,6 +135,7 @@ watchpoint，顾名思义，其一般用来观察某个变量/内存地址的状
    watch ((k_mm_list_t \*)0x1001dd08)->mbinfo->free_ptr
 
 用户若熟悉 Keil 环境，也可使用 keil 下载调试，调试方法可自行搜索。
+
 
 .. |image1| image:: ../../img/550X_GDB调试方法/图1-1.png
 .. |image2| image:: ../../img/550X_GDB调试方法/图2-1.png

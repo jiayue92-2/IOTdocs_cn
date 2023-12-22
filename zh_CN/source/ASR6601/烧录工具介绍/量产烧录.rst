@@ -1,6 +1,8 @@
 ASR6601 量产烧录方案介绍
 =======================
 
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Mass Production Download Scheme Introduction/index.html>`_
+
 前言
 ----
 

@@ -143,7 +143,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
 6.  可以通过编辑 asrwifidrv/Makefile 来配置编译不同的驱动，也可以通过 defconfig（推荐使用 menuconfig）
 
-    Ø ASR5532U 需要在 asrwifidrv/Makefile 里设置如下
+-  ASR5532U 需要在 asrwifidrv/Makefile 里设置如下
 
     CONFIG_NOT_USED_DTS = y
 
@@ -159,7 +159,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
     CONFIG_PLATFORM_RASPI_AARCH64 = y
 
-    Ø ASR5532S 需要在 asrwifidrv/Makefile 里设置如下
+-  ASR5532S 需要在 asrwifidrv/Makefile 里设置如下
 
     CONFIG_NOT_USED_DTS = y
 
@@ -175,7 +175,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
     CONFIG_PLATFORM_RASPI_AARCH64 = y
 
-    Ø ASR5505S 需要在 asrwifidrv/Makefile 里设置如下
+-  ASR5505S 需要在 asrwifidrv/Makefile 里设置如下
 
     CONFIG_NOT_USED_DTS=y
 
@@ -191,7 +191,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
     CONFIG_PLATFORM_RASPI_AARCH64 = y
 
-    Ø ASR5825S 需要在 asrwifidrv/Makefile 里设置如下
+-  ASR5825S 需要在 asrwifidrv/Makefile 里设置如下
 
     CONFIG_NOT_USED_DTS=y
 
@@ -207,7 +207,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
     CONFIG_PLATFORM_RASPI_AARCH64 = y
 
-    Ø ASR5955S 需要在 asrwifidrv/Makefile 里设置如下
+-  ASR5955S 需要在 asrwifidrv/Makefile 里设置如下
 
     CONFIG_NOT_USED_DTS = y
 
@@ -270,7 +270,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
 -  **手动复制到树莓派 asr5532 目录**
 
-把树莓派的 SD 卡插入到 PC，在 boot 分区新建一个目录 asr5532，把目标文件复制到 /boot/asr5532 目录下，然后把 SD 卡插入到树莓派中，树莓派上电启动进入串口终端把 /boot/asr5532 中的目标文件复制到 ~/asr5532 目录中：cp -r /boot/asr5532/ asr5532
+   把树莓派的 SD 卡插入到 PC，在 boot 分区新建一个目录 asr5532，把目标文件复制到 /boot/asr5532 目录下，然后把 SD 卡插入到树莓派中，树莓派上电启动进入串口终端把 /boot/asr5532 中的目标文件复制到 ~/asr5532 目录中：cp -r /boot/asr5532/ asr5532
 
 2. 替换 kernel
 

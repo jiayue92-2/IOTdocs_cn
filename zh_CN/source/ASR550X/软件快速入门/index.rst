@@ -19,7 +19,7 @@ ASR550X 软件快速入门
     ASR5502X&ASR5822X 系列 J-Link + GDB 调试方法<ASR5502X系列_J-Link和GDB调试方法>
     ASR 透传系列树莓派环境搭建指南<ASR透传系列_树莓派环境搭建指南>
     ASR 透传系列使用 DOGO 工具烧录 ate_sram 说明<ASR透传系列_使用DOGO工具烧录ate_sram说明>
-    ASR IoT 系列 OTA 功能开发指导<ASRIoT系列OTA功能开发指导>
+    ASR IoT 系列 OTA 功能开发指导<ASRIoT系列_OTA功能开发指导>
     ASR IoT 系列 开发板使用指南<ASRIoT系列开发板使用指南>
     ASR IoT 系列 Flash 加密及安全启动使用指南<https://pan.baidu.com/s/1B5dx5V-aj4CmXEQTsq4Big?pwd=1jdb>
     ASR IoT Series RTOS Application Notes<https://pan.baidu.com/s/1IBmqkkReErrcaz0nXqr85w?pwd=wlv9>

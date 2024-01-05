@@ -1,25 +1,16 @@
 ASR6601 匹配网络
 ================
 
-.. raw:: html
+.
+.. figure:: ../../img/6601_匹配网络/图1-1.png
+    :align: center
+    :scale: 30%
 
-   <center>
 
-|image1| 
+.. figure:: ../../img/6601_匹配网络/图1-2.png
+    :align: center
+    :scale: 30%
 
-.. raw:: html
-
-   </center>
-
-.. raw:: html
-
-   <center>
-
-|image2| 
-
-.. raw:: html
-
-   </center>
 
 .. |image1| image:: ../../img/6601_匹配网络/图1-1.png
 .. |image2| image:: ../../img/6601_匹配网络/图1-2.png

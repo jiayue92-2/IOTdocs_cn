@@ -150,13 +150,29 @@ ASR IoT 系列芯片在 OTA 的处理逻辑和 API 上基本一致，下面以 A
 2.2 地址映射
 ~~~~~~~~~~~~
 
+.. raw:: html
+
+   <center>
+
 |image6|
 
 地址映射升级方式
 
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
+
 |image7|
 
 地址映射升级流程图
+
+.. raw:: html
+
+   </center>
 
 地址映射升级的主要实现如上图，其依赖于系统对\ **逻辑地址和 flash 的物理地址空间进行映射，flash 地址以 SDK 实际定义为准**\ 。
 

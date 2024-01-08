@@ -152,15 +152,55 @@ QFN48    SONATA_PA_602
 
 2. 如使用低功耗功能，需要在低功耗配置函数 (app_sleep_init()) 的 app_after_wkup_cb() 回调函数中使用 sonata_ll_pa_enable() API 重新使能 PA 功能。SDK V1.7.1 后的版本，需要根据上表将相应的参数传入 sonata_ll_pa_enable() API。
 
+.. raw:: html
+
+   <center>
+
 |image7|
+
+低功耗下sonata_ll_pa_enable() API配置位置
+
+.. raw:: html
+
+   </center>
 
 3. 如使用 QFN32 封装，需要将 PA RX_EN 对应的 GPIO 输出高电平；如使用低功耗功能，需要在低功耗配置函数 (app_sleep_init()) 的 app_before_ds_cb 回调中将 RX_EN 对应的 GPIO 配置为输出低电平；在低功耗配置函数 (app_sleep_init()) 的 app_after_wkup_cb 回调中将 RX_EN 对应的 GPIO 配置为输出高电平。
 
+.. raw:: html
+
+   <center>
+
 |image8|
+
+QFN32 RX_EN输出高电平参考位置
+
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
 
 |image9|
 
+QFN32进入低功耗前RX_EN输出低电平参考位置
+
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
+
 |image10|
+
+QFN32低功耗唤醒后RX_EN输出高电平参考位置
+
+.. raw:: html
+
+   </center>
 
 4. SDK 默认发射功率为 0 dBm。如需调整发射功率，可以在 app.c app_ble_complete_event_handler() 函数 SONATA_GAP_CMP_BLE_ON 状态中使用 sonata_ll_set_txpwr() API 调整。
 

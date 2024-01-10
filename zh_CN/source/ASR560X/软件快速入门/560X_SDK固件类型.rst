@@ -107,7 +107,7 @@ RF 测试/校准固件，使用 UART1（P04/P05）作为通讯口，需要配合
 
 BLE 工程相比外设工程，在烧录 Bootloader 和 APP 固件的基础上，需要额外烧录 BLE 协议栈固件。
 
-因各个 APP 使用的 BLE 协议栈固件有差异，用户需要根据对应\ **APP config.mk**\ 脚本（路径为\ **SDK/build/build_rules/project/sonata_hl_\***\ \*_demo/**）的**\ LINKER_MISC_ROM_ELF_PATH**值判断，具体判断标准如下表：
+因各个 APP 使用的 BLE 协议栈固件有差异，用户需要根据对应 APP config.mk 脚本（路径为 SDK/build/build_rules/project/sonata_hl_****_demo/）的 LINKER_MISC_ROM_ELF_PATH 值判断，具体判断标准如下表：
 
 +--------------------------------------------------+-------------------------------------------+
 | **LINKER_MISC_ROM_ELF_PATH值**                   | **需要烧录的ROM固件**                     |

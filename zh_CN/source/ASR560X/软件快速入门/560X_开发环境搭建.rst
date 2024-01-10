@@ -126,7 +126,7 @@ https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-no
 2.2.2 Linux 编译环境配置
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-SDK 默认没有提供 Linux 平台的环境配置脚本，用户可以手动添加 TOOLCHAIN_PATH 环境变量，并将此环境变量配置为第\ `2.1.2 <#_Linux>`__\ 节指定 GCC 交叉工具链版本中的 bin 文件夹路径。如下图：
+SDK 默认没有提供 Linux 平台的环境配置脚本，用户可以手动添加 TOOLCHAIN_PATH 环境变量，并将此环境变量配置为第 2.1.2 节指定 GCC 交叉工具链版本中的 bin 文件夹路径。如下图：
 
 |image4|
 
@@ -137,7 +137,7 @@ SDK 默认没有提供 Linux 平台的环境配置脚本，用户可以手动添
 
 2. 使用命令 **make TARGET=\*\ \***\ \* 编译指定工程，其中 \**\* 对应 build/build_rules/project 目录下的工程名，例如：sonata_hl_data_trans_demo。
 
-3. 使用命令 **make TARGET=\*\ \***\ \* 编译 Peripheral 工程，其中 \******\* 对应 build/build_rules/project 目录下的工程名，例如：peripheral/gpio。
+3. 使用命令 **make TARGET=\*\ \***\ \* 编译 Peripheral 工程，其中 \**\* 对应 build/build_rules/project 目录下的工程名，例如：peripheral/gpio。
 
 4. 使用命令 **make clean** 可以删除已编译的工程文件。
 
@@ -188,13 +188,13 @@ ASR560X SDK 默认没有提供 Keil 工程，用户需要使用脚本自行生�
 
 1. 拷贝 SDK tools/ASR560X_2W2D.FLM 到 Keil 的 Flash 目录，例如 C::raw-latex:`\Keil`\_v5:raw-latex:`\ARM`:raw-latex:`\Flash`。
 
-2. 参考 https://www.keil.com/support/man/docs/uv4/uv4_fl_dlconfiguration.htm 来配置 Flash 编程算法。主要需配置如下内容：
+2. 参考 https://www.keil.com/support/man/docs/uv4/uv4_fl_dlconfiguration.htm 来配置Flash编程算法。主要需配置如下内容：
 
-(1) **Download Function**\ ：勾选 Erase Sectors、Program 和 Verify。
+   (1) **Download Function**\ ：勾选Erase Sectors、Program和Verify。
 
-(2) **RAM for Algorithm**\ ：设置 Start 为 0x20000000，Size 为 0x1000。
+   (2) **RAM for Algorithm**\ ：设置Start为0x20000000，Size为0x1000。
 
-(3) **Programming Algorithm**: 添加 ASR560X Flash 编程算法文件。
+   (3) **Programming Algorithm**: 添加ASR560X Flash编程算法文件。
 
 |image9|
 

@@ -1,6 +1,6 @@
 ASR560X 系列 BLE 编程工具用户手册
 ================================
-`English <https://asriot.readthedocs.io/en/latest/ASR560X/BLE Programming Tool User Manual.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/Download-Tool/560X_Programming.html>`_
 
 
 前言

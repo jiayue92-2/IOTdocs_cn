@@ -6,11 +6,11 @@ ASR560X 软件快速入门
 .. toctree::
    :maxdepth: 2
 
-    ASR560X 系列开发环境搭建与编译指南<560X_开发环境搭建>
+    ASR560X 系列开发环境搭建与编译指南<开发环境搭建>
     ASR560X 系列开发入门指南<https://pan.baidu.com/s/10yEqb7xZBF7BhFIFZBeHgg?pwd=spk5>
     ASR560X 系列内存布局配置应用手册<https://pan.baidu.com/s/1HH37ccrD2rwXOcwdDbJqbQ?pwd=36qr>
     ASR560X 系列快速入门指南<https://pan.baidu.com/s/1y6c0WdHOgsZnQVVulncHBQ?pwd=iu29>
-    ASR560X 系列 SDK 固件类型和烧录说明<560X_SDK固件类型>
-    ASR560X 系列 BLE 低功耗应用指南<https://pan.baidu.com/s/12y0690muq9V9r8bEEPgDBg?pwd=r74r>
+    ASR560X 系列 SDK 固件类型和烧录说明<SDK固件类型>
+    ASR560X 系列 BLE 低功耗应用指南<低功耗应用指南>
 
    

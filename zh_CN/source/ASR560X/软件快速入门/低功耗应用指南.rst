@@ -1,6 +1,6 @@
 ASR560X 系列 BLE 低功耗应用指南
 ==============================
-`English <https://asriot.readthedocs.io/en/latest/ASR560X/Low_Power_Application_Guide.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/Quick-Start/Low_Power_Application_Guide.html>`_
 
 
 前言

@@ -1,6 +1,6 @@
 ASR560X 软件快速入门
 =======================
-`English <https://asriot.readthedocs.io/en/latest/ASR560X/Quick Start/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/Quick-Start/index.html>`_
 
 
 .. toctree::

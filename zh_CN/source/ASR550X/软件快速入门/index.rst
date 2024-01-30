@@ -16,6 +16,7 @@ ASR550X 软件快速入门
     ASR5502X Series Peripheral Application Notes<https://pan.baidu.com/s/1cFuZYncZNZKPVpnuRHW_UQ?pwd=lbi9>
     ASR5505S SDIO 方案介绍<https://pan.baidu.com/s/1hersyIriNqPmpTfRKJMHaw?pwd=57bv>
     ASR5505S Wi-Fi 驱动移植和使用指南<https://pan.baidu.com/s/1dcL_yuX0FQxQuLRCR8a2Ow?pwd=aa5m>
+    ASR5505S Wi-Fi 低功耗使用指南<5505S_低功耗使用指南>
     ASR5502X&ASR5822X 系列 J-Link + GDB 调试方法<ASR5502X系列_J-Link和GDB调试方法>
     ASR 透传系列树莓派环境搭建指南<ASR透传系列_树莓派环境搭建指南>
     ASR 透传系列使用 DOGO 工具烧录 ate_sram 说明<ASR透传系列_使用DOGO工具烧录ate_sram说明>

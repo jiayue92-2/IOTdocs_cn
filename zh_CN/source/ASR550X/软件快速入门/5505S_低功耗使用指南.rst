@@ -93,7 +93,7 @@ Modem-sleep 不需要外接引脚唤醒。在 STA 模式下，通过指令的方
 2.1.2 Light-sleep
 ^^^^^^^^^^^^^^^^^
 
-Light-sleep 需要硬件支持。在没有进入 STA、SoftAP 模式时，通过 GPIO 控制进入或者退出该模式。硬件设计需要预留 2 个唤醒引脚的通路（PAD10、PAD12），硬件设计要求可以参考\ *《\ *\ **ASR5505S**\ *\ 硬件设计指南》*\ 。
+Light-sleep 需要硬件支持。在没有进入 STA、SoftAP 模式时，通过 GPIO 控制进入或者退出该模式。硬件设计需要预留 2 个唤醒引脚的通路（PAD10、PAD12），硬件设计要求可以参考《ASR5505S 硬件设计指南》。
 
 2.2 低功耗软件配置
 ~~~~~~~~~~~~~~~~~~
@@ -238,12 +238,41 @@ Light-sleep  0.8 mA
 
 具体如下图：
 
+.. raw:: html
+
+   <center>
+
 |image11|
+
+树莓派 Active (STA) 功耗
+
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
 
 |image12|
 
+树莓派 Modem-sleep 功耗
+
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
+
 |image13|
 
+树莓派 Light-sleep 功耗
+
+.. raw:: html
+
+   </center>
 
 
 .. |image1| image:: ../../img/5505_低功耗使用指南/图2-1.png

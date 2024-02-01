@@ -1,6 +1,6 @@
 ASR6601 常见问题
 =======================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/FAQs/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/FAQ/index.html>`_
 
 
 .. toctree::

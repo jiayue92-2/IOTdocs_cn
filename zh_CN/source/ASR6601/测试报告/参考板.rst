@@ -4,6 +4,8 @@
 
 ASR6601 参考板测试指南
 ======================
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Test-Report/Board.html>`_
+
 
 前言
 ----

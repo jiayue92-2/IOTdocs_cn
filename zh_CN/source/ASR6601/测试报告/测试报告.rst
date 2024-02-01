@@ -1,5 +1,7 @@
 ASR6601 测试报告
 ======================
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Test-Report/Report.html>`_
+
 
 前言
 ----

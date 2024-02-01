@@ -1,5 +1,7 @@
 ASR5505S 芯片技术规格书
 ==================
+`English <https://asriot.readthedocs.io/en/latest/ASR550X/Datasheet/5505S_DS.html>`_
+
 
 Introduction
 ------------

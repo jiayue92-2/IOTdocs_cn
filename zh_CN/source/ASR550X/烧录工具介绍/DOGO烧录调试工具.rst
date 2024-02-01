@@ -1,5 +1,7 @@
 ASR IoT 芯片 DOGO 烧录调试工具
 ==============================
+`English <https://asriot.readthedocs.io/en/latest/ASR550X/Download-Tool/ASR_IoT_DOGO_Tool_User_Guide.html>`_
+
 
 前言
 ----

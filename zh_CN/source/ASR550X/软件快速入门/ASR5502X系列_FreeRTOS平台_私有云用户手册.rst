@@ -94,7 +94,7 @@ ThingsBoard 配置 MQTTS：https://thingsboard.io/docs/user-guide/mqtt-over-ssl/
 
 使用 ASR FreeRTOS SDK 编译的方法，可参考 SDK 中的编译说明文件。
 
-默认的编译方式没有将私有云代码编译，需要开发者手动修改默认配置： 将 *build/build_rules/project/demo/config.mk* 文件中的 CLOUD_SWITCH 配置修改为 1（原先为 0，默认不编译），并且将 \*$(NAME)_FLAGS += -DCLOUD_PRIVATE_SUPPORT\* 被注释掉的部分打开。
+默认的编译方式没有将私有云代码编译，需要开发者手动修改默认配置： 将 *build/build_rules/project/demo/config.mk* 文件中的 CLOUD_SWITCH 配置修改为 1（原先为 0，默认不编译），并且将 */$(NAME)_FLAGS += -DCLOUD_PRIVATE_SUPPORT* 被注释掉的部分打开。
 
 若对应平台使用了 TLS 认证，还需在 */cloud/src/private_cloud_ca.c* 文件中修改对应的 CA 证书、设备证书和设备私钥。
 
@@ -105,11 +105,11 @@ ThingsBoard 配置 MQTTS：https://thingsboard.io/docs/user-guide/mqtt-over-ssl/
 
 1. **芯片连接网络：**
 
-运行私有云需要先调用 Wi-Fi 相关命令使芯片连接路由器，相关使用方法可参考文档*《\ **ASR5502X**\ 系列**_FreeRTOS\ **平台**\ \_AT**命令使用指南》*，以下为简单的示例：
+运行私有云需要先调用 Wi-Fi 相关命令使芯片连接路由器，相关使用方法可参考文档\ *《ASR5502X 系列_FreeRTOS 平台_AT 命令使用指南》*\，以下为简单的示例：
 
-输入命令：\ *wifi_open sta *
+输入命令： */wifi_open sta <SSID> <password>*
 
-命令解释：wifi_open sta 为固定字符串；为将要连接的路由器的 SSID；为路由器密码。
+命令解释：wifi_open sta 为固定字符串；<SSID>为将要连接的路由器的 SSID；<password>为路由器密码。
 
 2. **使用连接命令：**
 
@@ -323,11 +323,11 @@ EMQ管理命令：https://docs.emqx.io/broker/latest/cn/advanced/cli.html
 
 1. **芯片连接网络**
 
-运行私有云需要先调用 Wi-Fi 相关命令使芯片连接路由器，相关使用方法可参考文档*《ASR5502X 系列_FreeRTOS 平台__AT 命令使用指南》*，以下为简单的说明：
+运行私有云需要先调用 Wi-Fi 相关命令使芯片连接路由器，相关使用方法可参考文档\ *《ASR5502X 系列_FreeRTOS 平台_AT 命令使用指南》*\ ，以下为简单的说明：
 
-输入命令：\ *wifi_open sta *
+输入命令： */wifi_open sta <SSID> <password>*
 
-命令解释：wifi_open sta 为固定字符串；为将要连接的路由器的 SSID；为路由器密码。
+命令解释：wifi_open sta 为固定字符串；<SSID> 为将要连接的路由器的 SSID；<password>为路由器密码。
 
 2. **使用连接命令**
 

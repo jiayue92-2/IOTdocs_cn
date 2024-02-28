@@ -117,18 +117,18 @@ ThingsBoard 配置 MQTTS：https://thingsboard.io/docs/user-guide/mqtt-over-ssl/
 
 相关指令如下表所示。其中，若对应平台开启了 TLS 认证，\ *username*\ 可填写任意非空值。\ *private write*\ 命令将这些参数写入 flash中，供私有云启动时调用。
 
-======================== ==============================
-**指令**                 **描述**
-======================== ==============================
-private write host       连接的hostname或ip address
-private write port       连接的端口
-private write protocol   选择http还是mqtt连接
-private write tls_switch 开启或关闭tls
-private write username   ThingsBoard的连接令牌（token）
-private write timeout    连接超时时间，可设为100
-private show             显示当前写入flash中的设置
-private start            开启任务并连接私有云
-======================== ==============================
+=============================== ==============================
+**指令**                        **描述**
+=============================== ==============================
+private write host <hostname>   连接的hostname或ip address
+private write port <portname>   连接的端口
+private write protocol          选择http还是mqtt连接
+private write tls_switch        开启或关闭tls
+private write username <token>  ThingsBoard的连接令牌（token）
+private write timeout <timeout> 连接超时时间，可设为100
+private show                    显示当前写入flash中的设置
+private start                   开启任务并连接私有云
+=============================== ==============================
 
 2.4 代码解释
 ~~~~~~~~~~~~

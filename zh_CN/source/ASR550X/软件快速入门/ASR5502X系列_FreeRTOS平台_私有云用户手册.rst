@@ -338,11 +338,11 @@ EMQ管理命令：https://docs.emqx.io/broker/latest/cn/advanced/cli.html
 ===================== ==========================
 **指令**              **描述**
 ===================== ==========================
-mqtt write host       连接的hostname或ip address
-mqtt write port       连接的端口
-mqtt write tls_switch 开启或关闭tls
-mqtt write username   连接的账号
-mqtt write userpass   连接的密码
+mqtt write host <hostname>       连接的hostname或ip address
+mqtt write port <portname>       连接的端口
+mqtt write tls_switch <on/off> 开启或关闭tls
+mqtt write username <username>   连接的账号
+mqtt write userpass <userpass>   连接的密码
 mqtt show             显示当前写入flash中的设置
 mqtt start            开启任务并连接私有云
 ===================== ==========================

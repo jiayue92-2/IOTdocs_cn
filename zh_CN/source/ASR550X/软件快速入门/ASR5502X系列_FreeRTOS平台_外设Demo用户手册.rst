@@ -114,7 +114,7 @@ GPIO 设备的结构体定义如下所示：
 
 |image9|
 
-完整代码请参考\ *SDK\ *\ **：**\ *\ demo/periphare/gpio*\ 文件夹。
+完整代码请参考 *SDK：demo/periphare/gpio* 文件夹。
 
 2.2 Watchdog 接口使用说明
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,7 +215,7 @@ config 中的结构体成员说明如下：
 
 |image18|
 
-完整代码请参考\ *SDK\ *\ **：**\ *\ demo/periphare/timer*\ 文件夹。
+完整代码请参考 *SDK：demo/periphare/timer* 文件夹。
 
 2.4 UART 接口使用说明
 ~~~~~~~~~~~~~~~~~~~~
@@ -292,7 +292,7 @@ UART 设备的结构体定义如下所示：
 
 |image26|
 
-完整代码请参考\ *SDK\ *\ **：**\ *\ demo/periphare/uart*\ 文件夹。
+完整代码请参考 *SDK：demo/periphare/uart* 文件夹。
 
 2.5 PWM 接口使用说明
 ~~~~~~~~~~~~~~~~~~~
@@ -357,7 +357,7 @@ PWM 通道 7 产生 10K 占空比为 50% 的方波信号：
 
 |image30|
 
-完整代码请参考\ *SDK\ *\ **：**\ *\ demo/periphare/pwm*\ 文件夹。
+完整代码请参考 *SDK：demo/periphare/pwm* 文件夹。
 
 2.6 Flash 接口使用说明
 ~~~~~~~~~~~~~~~~~~~~~
@@ -456,7 +456,7 @@ API 函数的参数 in_buf 和 out_buf 为数据读写缓冲区指针，参数 i
 
 |image42|
 
-完整代码请参考\ *SDK：见demo/periphare/flash(kv_flash)* 文件夹。
+完整代码请参考 *SDK：demo/periphare/flash(kv_flash) 文件夹。
 
 2.7 eFuse接口使用说明
 ~~~~~~~~~~~~~~~~~~~~~
@@ -585,7 +585,7 @@ config 中的结构体成员说明如下：
 
 |image57|
 
-完整代码请参考\ *SDK\ *\ **：**\ *\ demo/periphare/i2c_master*\ 文件夹。
+完整代码请参考 *SDK：demo/periphare/i2c_master* 文件夹。
 
 2.9 SPI接口使用说明
 ~~~~~~~~~~~~~~~~~~~
@@ -648,7 +648,7 @@ SPI 设备结构体的定义如下所示：
 
 |image63|
 
-完整代码请参考\ *SDK\ *\ **：**\ *\ demo/periphare/SPI*\ 文件夹。
+完整代码请参考 *SDK：demo/periphare/SPI* 文件夹。
 
 2.10 RTC接口使用说明
 ~~~~~~~~~~~~~~~~~~~~

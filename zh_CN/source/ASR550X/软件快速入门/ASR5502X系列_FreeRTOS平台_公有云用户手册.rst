@@ -299,11 +299,11 @@ Huawei stop                              关闭华为云
 
    华为云新建产品后需要配置 profile 文件，在 profile 文件中新增如下内容，具体如下图
 
-   *ServiceID\ *\ **：**\ *\ Turn*
+   *ServiceID：Turn*
 
-​ *属性：switchone*
+​   *属性：switchone*
 
-​ *命令：control*
+​   *命令：control*
 
 关于 profile 的作用，可参见华为云官方文档说明。
 

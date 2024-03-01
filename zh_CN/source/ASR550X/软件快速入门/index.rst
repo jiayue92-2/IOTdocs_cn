@@ -11,7 +11,7 @@ ASR550X 软件快速入门
     ASR5502X 系列 FreeRTOS 平台 AT 命令使用指南<https://pan.baidu.com/s/17FYx1C0AqGzoy28qdOGY1w?pwd=dtfd>
     ASR5502X 系列 FreeRTOS 平台外设 Demo 用户手册<ASR5502X系列_FreeRTOS平台_外设Demo用户手册>
     ASR5502X 系列 FreeRTOS 平台软件（Wi-Fi 部分）使用手册<https://pan.baidu.com/s/1aKy2SE22qNR22TD336nrKg?pwd=43o0>
-    ASR5502X 系列 FreeRTOS 平台公有云用户手册<ASR5502X系列 FreeRTOS平台_公有云用户手册>
+    ASR5502X 系列 FreeRTOS 平台公有云用户手册<ASR5502X系列_FreeRTOS平台_公有云用户手册>
     ASR5502X 系列 FreeRTOS 平台私有云用户手册<ASR5502X系列_FreeRTOS平台_私有云用户手册>
     ASR5502X Series Peripheral Application Notes<https://pan.baidu.com/s/1cFuZYncZNZKPVpnuRHW_UQ?pwd=lbi9>
     ASR5505S SDIO 方案介绍<https://pan.baidu.com/s/1hersyIriNqPmpTfRKJMHaw?pwd=57bv>

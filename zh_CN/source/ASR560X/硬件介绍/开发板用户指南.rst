@@ -1,5 +1,7 @@
 ASR560X 系列开发板用户指南
 ==========================
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/Hardware-Reference/Development_Board.html>`_
+
 
 前言
 ----

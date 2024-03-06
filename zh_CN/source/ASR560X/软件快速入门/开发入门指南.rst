@@ -143,6 +143,7 @@ ASR560X 的固件及其功能说明如下：
 ​.. note:: 
     若在对应目录下未找到固件，或需要获取最新固件，均可与代理商或 ASR 原厂联系。
 
+
 2.2 烧录
 ~~~~~~~~
 
@@ -386,7 +387,7 @@ SDK 关于 OTA 功能的接口声明在 ota:raw-latex:`\ota`\_download.h 中，�
 3.8 PIN MUX
 ~~~~~~~~~~~
 
- raw:: html
+.. raw:: html
 
    <center>
 
@@ -431,11 +432,11 @@ Num. Pin Name Func=0 Func=1    Func=2    Func=3   Func=4
 30   P29      GPIO29 UART2_TXD KEY_ROW5  I2S_DO   PWM3
 ==== ======== ====== ========= ========= ======== ======
 
-. raw:: html
+.. raw:: html
 
    <center>
 
-**通用IO口Pin Mux-2**
+**通用 IO 口 Pin Mux-2**
 
 .. raw:: html
 

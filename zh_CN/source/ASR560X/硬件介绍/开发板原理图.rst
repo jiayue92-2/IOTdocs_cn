@@ -1,5 +1,7 @@
 ASR560X系列 开发板原理图
 ============================
+`English <https://asriot.readthedocs.io/en/latest/ASR560X/Hardware-Reference/Schematics.html>`_
+
 
  - `ASR5601_QFN32 开发板原理图 <https://pan.baidu.com/s/15-t1S53MnDpYWl5oEVaXVQ?pwd=6ppu>`_
  - `ASR5601T3_QFN48 开发板原理图 <https://pan.baidu.com/s/178QTyOPRCkKgLvNZvUVxOg?pwd=s458>`_

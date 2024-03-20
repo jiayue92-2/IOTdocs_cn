@@ -141,6 +141,7 @@ VERSION  17           读取版本号命令
 
 无
 
+
 应答：
 
 无
@@ -151,6 +152,7 @@ VERSION  17           读取版本号命令
 请求：
 
 Addr: 4 Bytes，跳转地址
+
 
 应答：
 
@@ -167,6 +169,7 @@ Size: 4 Bytes，烧录数据长度
 
 Data: N Bytes，烧录数据
 
+
 应答：
 
 无
@@ -179,6 +182,7 @@ Data: N Bytes，烧录数据
 Addr: 4 Bytes，擦除地址
 
 Size: 4 Bytes，擦除区域大小
+
 
 应答：
 
@@ -195,6 +199,7 @@ Size: 4 Bytes，验证区域大小
 
 Checksum: 4 Bytes，验证校验值
 
+
 应答：
 
 无
@@ -210,6 +215,7 @@ Size: 4 Bytes，烧录数据长度
 
 Data: N Bytes，烧录数据
 
+
 应答：
 
 无
@@ -222,6 +228,7 @@ Data: N Bytes，烧录数据
 Addr: 4 Bytes，地址
 
 Size: 4 Bytes，数据长度
+
 
 应答：
 
@@ -236,6 +243,7 @@ Opt0_l: 4 Bytes，Option0的低32 bits
 
 Opt0_h: 4 Bytes，Option0的高32 bits
 
+
 应答：
 
 无
@@ -246,6 +254,7 @@ Opt0_h: 4 Bytes，Option0的高32 bits
 请求：
 
 无
+
 
 应答：
 
@@ -262,6 +271,7 @@ Opt1_l: 4 Bytes，Option1的低32 bits
 
 Opt1_h: 4 Bytes，Option1的高32 bits
 
+
 应答：
 
 无
@@ -272,6 +282,7 @@ Opt1_h: 4 Bytes，Option1的高32 bits
 请求：
 
 无
+
 
 应答：
 
@@ -286,6 +297,7 @@ Opt1_h: 4 Bytes，Option1的高32 bits
 
 无
 
+
 应答：
 
 无
@@ -296,6 +308,7 @@ Opt1_h: 4 Bytes，Option1的高32 bits
 请求：
 
 无
+
 
 应答：
 
@@ -310,6 +323,7 @@ Addr: 4 Bytes，地址
 
 Value: 4 Bytes，值
 
+
 应答：
 
 无
@@ -320,6 +334,7 @@ Value: 4 Bytes，值
 请求：
 
 Addr: 4 Bytes，地址
+
 
 应答：
 
@@ -332,6 +347,7 @@ Value: 4 Bytes，值
 
 Baudrate: 4 Bytes，波特率
 
+
 应答：
 
 无
@@ -342,6 +358,7 @@ Baudrate: 4 Bytes，波特率
 请求：
 
 无
+
 
 应答：
 

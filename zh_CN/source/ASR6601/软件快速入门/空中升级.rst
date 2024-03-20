@@ -4,7 +4,7 @@
 
 ASR6601 OTA 升级说明
 ====================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Quick-Start/OTA/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Quick-Start/OTA.html>`_
 
 
 前言

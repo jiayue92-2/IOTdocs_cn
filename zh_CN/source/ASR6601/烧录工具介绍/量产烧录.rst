@@ -1,7 +1,7 @@
 ASR6601 量产烧录方案介绍
 =======================
 
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Download-Tool/multi_programmer/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Download-Tool/multi_programmer.html>`_
 
 前言
 ----

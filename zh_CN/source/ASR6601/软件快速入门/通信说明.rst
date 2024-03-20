@@ -4,7 +4,7 @@
 
 ASR6601 Bootloader 通信说明
 ===========================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Quick-Start/communication_notes/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Quick-Start/communication_notes.html>`_
 
 
 前言

@@ -1,6 +1,6 @@
 ASR6601 烧录工具使用说明
 ========================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Download-Tool/tremo_programmer/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Download-Tool/tremo_programmer.html>`_
 
 
 前言

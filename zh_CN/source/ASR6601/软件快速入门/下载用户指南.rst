@@ -71,14 +71,14 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 ======= ====== =========================
 
 1. J-Link支持包安装
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ASR6601 支持标准 SWD 接口，可通过 J-Link 进行烧录。烧录前，需要添加 ASR6601 到 J-Link 的设备列表中。拷贝 SDK 的 tools/JLink/Devices 目录下的 ASR 目录到 J-Link 安装目录的 Devices 目录下，并将 tools/JLink/JLinkDevices.xml 文件中末尾关于 ASR6601 的设备描述添加到 J-Link 目录下的 JLinkDevices.xml 文件中。
 
 |image1|
 
 2.J-Link下载
-~~~~~~~~~~~~
+------------
 
 安装完 J-Link 支持包后就可以使用 J-Link 烧录了。将 ASR6601 的 SWD、SWC 引脚分别与 J-Link 的 SWDIO、SWCLK 引脚连接，共地。
 
@@ -89,4 +89,4 @@ ASR6601 支持标准 SWD 接口，可通过 J-Link 进行烧录。烧录前，�
 使用 JFlash 打开 SDK 的 tool/JLink/JFlash 目录下的 ASR6601 JFlash 工程，即可烧录。
 
 .. |image1| image:: ../../img/6601_下载用户指南/图1-1.png
-.. |image2| image:: ../../img/6601_下载用户指南/图1-2.png
+.. |image2| image:: ../../img/6601_下载用户指南/图2-1.png

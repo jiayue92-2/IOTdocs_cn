@@ -4,7 +4,7 @@
 
 ASR6601 程序开发快速入门指南
 ============================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Quick-Start/quick_start/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR6601/Quick-Start/quick_start.html>`_
 
 
 前言

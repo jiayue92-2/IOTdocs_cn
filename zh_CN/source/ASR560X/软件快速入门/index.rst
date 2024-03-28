@@ -13,5 +13,6 @@ ASR560X 软件快速入门
     ASR560X 系列 SDK 固件类型和烧录说明<SDK固件类型>
     ASR560X 系列 BLE 低功耗应用指南<低功耗应用指南>
     ASR560X 系列 HardFault 问题分析参考指南<问题分析参考指南>
+    ASR560X 系列 BLE OTA over GATT 设计规范<设计规范>
 
    

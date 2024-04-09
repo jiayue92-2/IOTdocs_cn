@@ -22,6 +22,7 @@ ASR550X 软件快速入门
     ASR 透传系列 P2P 功能使用指南<ASR透传系列_P2P功能使用指南>
     ASR 透传系列使用 DOGO 工具烧录 ate_sram 说明<ASR透传系列_使用DOGO工具烧录ate_sram说明>
     ASR 透传系列 Wi-Fi 驱动移植和使用指南<https://pan.baidu.com/s/1jETiUXB3LMnsxQf8bQQhow?pwd=pz1r>
+    ASR 透传系列 RVR 测试说明<ASR数传系列_RVR测试说明>
     ASR IoT 系列 OTA 功能开发指导<ASRIoT系列_OTA功能开发指导>
     ASR IoT 系列 开发板使用指南<ASRIoT系列开发板使用指南>
     ASR IoT 系列 Flash 加密及安全启动使用指南<ASRIoT系列_Flash加密及安全启动使用指南>

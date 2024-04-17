@@ -212,9 +212,9 @@ SDK 目录结构如下表所示：
 
 1. 进入目录：\ ``cd /root/src/build``
 
-2. 编译命令：make TARGET=demo                 *默认是52M主频*
+2. 编译命令：make TARGET=demo *默认是52M主频*
 
-​                     make TARGET=demo  freq=80  *80M主频*
+​ make TARGET=demo freq=80 *80M主频*
 
 3. 编译完成后，生成的 demo.bin 文件在 build/out/demo 目录下；
 
@@ -269,9 +269,9 @@ SDK 目录结构如下表所示：
 
 5. 清除编译产生的文件：输入命令\ ``make clean``
 
-6. 编译项目：编译命令：make TARGET=demo                 *默认是52M主频*
+6. 编译项目：输入命令：make TARGET=demo *默认是52M主频*
 
-​                                      make TARGET=demo  freq=80  *80M主频*
+​ make TARGET=demo freq=80 *80M主频*
 
 ​ 编译完成后，生成的 demo.bin 文件在 build/out/demo 目录下：
 
@@ -360,9 +360,9 @@ SDK 目录结构如下表所示：
 
 ​     进入目录：\ ``cd /root/src/build``
 
-​     编译命令：make TARGET=demo                 *默认是52M主频*
+​     编译命令：make TARGET=demo *默认是52M主频*
 
-​                      make TARGET=demo  freq=80  *80M主频*
+​     make TARGET=demo freq=80 *80M主频*
 
 ​     编译完成后，生成的 demo.bin 文件在 build/out/demo 目录下；
 
@@ -393,9 +393,9 @@ SDK 目录结构如下表所示：
 
    进入目录：\ ``cd SDK 目录 /build``
 
-   编译命令：make TARGET=demo                 *默认是52M主频*
+   编译命令：make TARGET=demo *默认是52M主频*
 
-​                    make TARGET=demo  freq=80  *80M主频*
+​   make TARGET=demo freq=80 *80M主频*
 
    编译完成后，生成的 demo.bin 文件在 build/out/demo 目录下；
 

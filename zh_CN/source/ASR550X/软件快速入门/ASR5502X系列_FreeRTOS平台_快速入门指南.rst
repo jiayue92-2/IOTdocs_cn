@@ -214,7 +214,7 @@ SDK 目录结构如下表所示：
 
 2. 编译命令：
 
-    make TARGET=demo *默认是52M主频*
+    make TARGET=demo              *默认是52M主频*
 
     make TARGET=demo freq=80 *80M主频*
 
@@ -273,7 +273,7 @@ SDK 目录结构如下表所示：
 
 6. 编译项目：输入命令：
 
-    make TARGET=demo *默认是52M主频*
+    make TARGET=demo              *默认是52M主频*
 
     make TARGET=demo freq=80 *80M主频*
 
@@ -366,7 +366,7 @@ SDK 目录结构如下表所示：
 
 ​     编译命令：
 
-     make TARGET=demo *默认是52M主频*
+     make TARGET=demo              *默认是52M主频*
 
      make TARGET=demo freq=80 *80M主频*
 
@@ -401,7 +401,7 @@ SDK 目录结构如下表所示：
 
    编译命令：
 
-   make TARGET=demo *默认是52M主频*
+   make TARGET=demo              *默认是52M主频*
 
    make TARGET=demo freq=80 *80M主频*
 

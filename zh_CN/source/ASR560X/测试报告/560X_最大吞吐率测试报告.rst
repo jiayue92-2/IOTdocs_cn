@@ -78,7 +78,7 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 -  一台 PC 操作机
 
 1.3 软件
---------
+~~~~~~~~
 
 -  使用串口调试助手 SCCOM 5.13.1
 
@@ -117,15 +117,15 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
 |image1|
 
-(2) set_perf_param X Y：X、Y 分别为设置的连接间隔时间和事件时间。 X=connect interval/1.25，Y=event length/0.625，如下图所示：
+   (2) set_perf_param X Y：X、Y 分别为设置的连接间隔时间和事件时间。 X=connect interval/1.25，Y=event length/0.625，如下图所示：
 
 |image2|
 
-(3) set_pkt_num X：X 为发包数量，如下图所示：
+   (3) set_pkt_num X：X 为发包数量，如下图所示：
 
 |image3|
 
-(4) set_pkt_size X：X 为发包大小，可设置范围 [20, 244]，如下图所示：
+   (4) set_pkt_size X：X 为发包大小，可设置范围 [20, 244]，如下图所示：
 
 |image4|
 
@@ -148,7 +148,6 @@ ASR、翱捷和其他翱捷商标均为翱捷科技股份有限公司的商标�
 
 4. 记录 DUT1 串口的数据。
 
-|image6|
 
 +----------+--------------+------------------------------+----------------------------------+-------------------+-------------------+---------------------+---------------------+
 | 联网模式 | **Protocol** | **Connection Interval (ms)** | **ATT Payload** **Size (Bytes)** | **Packet Number** | **Method**        | **LE 1M PHY (bps)** | **LE 2M PHY (bps)** |
@@ -163,10 +162,9 @@ BT 联盟提供的吞吐率测试计算方法的链接如下：
 
 https://www.bluetooth.com/blog/exploring-bluetooth-5-how-fast-can-it-be/
 
+|image6|
 
 |image7|
-
-|image8|
 
 
 .. |image1| image:: ../../img/560X_最大吞吐率报告/图2-1.png

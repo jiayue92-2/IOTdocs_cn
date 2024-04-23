@@ -9,7 +9,7 @@ ASR560X 软件快速入门
     ASR560X 系列开发环境搭建与编译指南<开发环境搭建>
     ASR560X 系列开发入门指南<开发入门指南>
     ASR560X 系列内存布局配置应用手册<内存布局配置>
-    ASR560X 系列快速入门指南<https://pan.baidu.com/s/1y6c0WdHOgsZnQVVulncHBQ?    ASR560X 系列外设用户指南<pwd=iu29>https://pan.baidu.com/s/1ojBuaQ0QhyaYmeJ1xZ73DA?pwd=ac2u>
+    ASR560X 系列快速入门指南<https://pan.baidu.com/s/1Tkn3rmrzc7slQo6XE-RIow?pwd=s5u5>
     ASR560X 系列 SDK 固件类型和烧录说明<SDK固件类型>
     ASR560X 系列 BLE 低功耗应用指南<低功耗应用指南>
     ASR560X 系列 HardFault 问题分析参考指南<问题分析参考指南>

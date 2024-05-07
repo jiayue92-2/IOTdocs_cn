@@ -15,6 +15,7 @@ ASR550X 软件快速入门
     ASR5502X 系列 FreeRTOS 平台私有云用户手册<ASR5502X系列_FreeRTOS平台_私有云用户手册>
     ASR5502X Series Peripheral Application Notes<https://pan.baidu.com/s/1cFuZYncZNZKPVpnuRHW_UQ?pwd=lbi9>
     ASR5505S SDIO 方案介绍<https://pan.baidu.com/s/1hersyIriNqPmpTfRKJMHaw?pwd=57bv>
+    ASR5505S 开发板使用指南<https://pan.baidu.com/s/1G6YhS426gsoLUHGC4eaK-Q?pwd=n7vx>
     ASR5505S Wi-Fi 低功耗使用指南<5505S_低功耗使用指南>
     ASR5502X&ASR5822X 系列 J-Link + GDB 调试方法<ASR5502X系列_J-Link和GDB调试方法>
     ASR550X 和 ASR582X 系列 私有云认证说明<ASR550X系列_私有云认证说明>

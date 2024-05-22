@@ -17,5 +17,6 @@ ASR560X 软件快速入门
     ASR560X 系列 BLE OTA over GATT 设计规范<设计规范>
     ASR560X 系列 BLE Mesh AT命令说明<命令说明>
     ASR560X 系列低温应用指南<560X_低温应用指南>
+    ASR IoT 系列 BLE AT命令说明 <https://pan.baidu.com/s/1zeo4tEGtfoDSlYq7FMDfTA?pwd=0jb3>
 
    

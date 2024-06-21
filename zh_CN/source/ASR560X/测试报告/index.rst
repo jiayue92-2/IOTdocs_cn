@@ -1,6 +1,5 @@
 ASR560X 测试报告
 =======================
-`English <https://asriot.readthedocs.io/en/latest/ASR560X/Test-Report/index.html>`_
 
 
 .. toctree::

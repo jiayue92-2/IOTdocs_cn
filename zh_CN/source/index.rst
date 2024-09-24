@@ -54,7 +54,7 @@ LPWAN 芯片
    ASR550X/芯片规格/index
    ASR550X/硬件介绍/index
    ASR550X/烧录工具介绍/index
-   ASR550X/演示工程／SDK/index
+   ASR550X/演示工程/index
    ASR550X/软件快速入门/index
    ASR550X/常见问题/index
    ASR550X/认证/index
@@ -67,7 +67,7 @@ LPWAN 芯片
    ASR560X/芯片规格/index
    ASR560X/硬件介绍/index
    ASR560X/烧录工具介绍/index
-   ASR560X/演示工程／SDK/index
+   ASR560X/演示工程/index
    ASR560X/软件快速入门/index
    ASR560X/常见问题/index
    ASR560X/认证/index
@@ -80,7 +80,7 @@ LPWAN 芯片
    ASR6601/芯片规格/index
    ASR6601/硬件介绍/index
    ASR6601/烧录工具介绍/index
-   ASR6601/演示工程／SDK/index
+   ASR6601/演示工程/index
    ASR6601/软件快速入门/index
    ASR6601/常见问题/index
    ASR6601/认证/index

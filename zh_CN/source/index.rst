@@ -2,6 +2,15 @@ ASR 文档页
 =======================
 `English <https://asriot.readthedocs.io/en/latest/>`_
 
+这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 产品的选型表。
+
+.. toctree::
+   :maxdepth: 2
+
+    IoT/AIoT Wi-Fi MCU<iot>
+    Wi-Fi Interface Transceiver<透传>
+    Bluetooth Product<蓝牙>
+    LoRa Product<lora>
 
 这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 产品的文档。
 

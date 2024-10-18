@@ -10,9 +10,8 @@ ASR 文档页
     IoT/AIoT Wi-Fi MCU<iot>
     Wi-Fi Interface Transceiver<透传>
     LoRa Product<lora>
-    Bluetooth Product<蓝牙>
 
-这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 产品的文档。
+以下是 `ASR <http://www.asrmicro.com/index>`_ IoT 产品的公开文档。
 
 
 Wi-Fi 芯片

@@ -3,15 +3,8 @@ Bluetooth Product
 `English <https://asriot.readthedocs.io/en/latest/蓝牙.html>`_
 
 
-.. raw:: html
 
-   <center>
-
-|image1| 
-
-.. raw:: html
-
-   </center>
-
-
-.. |image1| image:: ../../img/图1.png
+.. figure:: ../../img/蓝牙/图1-1.png
+    :align: center
+    :scale: 30%
+    :alt: ASR5502X QFN40 EVB 参考设计（点击放大）

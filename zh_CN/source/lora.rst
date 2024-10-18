@@ -1,6 +1,6 @@
 LoRa Product
 ================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Hardware-Reference/matching_network.html>`_
+`English <https://asriot.readthedocs.io/en/latest/lora.html>`_
 
 
 +----------------+----------------+----------------+-------------------------+-------------------------+

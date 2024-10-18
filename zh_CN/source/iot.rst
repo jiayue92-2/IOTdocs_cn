@@ -1,6 +1,6 @@
 IoT/AIoT Wi-Fi MCU
 ================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Hardware-Reference/matching_network.html>`_
+`English <https://asriot.readthedocs.io/en/latest/iot.html>`_
 
 +---------------------+-----------------+-----------------+-----------------+--------------------+--------------------+--------------------+-----------------+
 | Model               | ASR5502S        | ASR5502A        | ASR5502C        | ASR5822T           | ASR5822S           | ASR5822N           | ASR5952S        |

@@ -1,6 +1,6 @@
 Bluetooth Product
 =====================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/Hardware-Reference/matching_network.html>`_
+`English <https://asriot.readthedocs.io/en/latest/蓝牙.html>`_
 
 
 .. raw:: html
@@ -14,4 +14,4 @@ Bluetooth Product
    </center>
 
 
-.. |image1| image:: ../../img/蓝牙/图1-1.png
+.. |image1| image:: ../../img/图1.png

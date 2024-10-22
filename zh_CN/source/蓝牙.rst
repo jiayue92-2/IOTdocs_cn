@@ -1,0 +1,21 @@
+Bluetooth Product
+=====================
+`English <https://asriot.readthedocs.io/en/latest/蓝牙.html>`_
+
+
+============= ========= ========= ========= =========
+Model         ASR5601S  ASR5601A  ASR5601A  ASR5601B
+============= ========= ========= ========= =========
+**Sub Code**  -F        -NH       -CL       -CL
+**BLE**       √         √         √         √
+**Mesh**      √         √         √         √
+**IEEE 15.4** √                             
+**2.4G**      √         √         √         √
+**AOA/AOD**   √                             
+**AUDIN/IR**  √                   √         √
+**Supply**    1.7-5.0 V 2.8-5.0 V 1.7-3.6 V 1.7-3.6 V
+**Package**   QFN48     QFN32     QFN32     QFN48
+**Flash**     1 MB      512 KB    512 KB    512 KB
+**MCU**       64 MHz    64 MHz    64 MHz    64 MHz
+**RAM**       96 KB     96 KB     96 KB     96 KB
+============= ========= ========= ========= =========

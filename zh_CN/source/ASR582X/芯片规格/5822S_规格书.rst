@@ -67,8 +67,8 @@ Date    Version Release Notes
 1. Overview
 -----------
 
-1.1 General
------------
+1.2 General
+~~~~~~~~~~~~
 
 ASR5822S is a highly integrated, high performance, and low cost System-on-Chip (SoC) which supports both 1x1 IEEE 802.11 b/g/n and Bluetooth 5.1 Low Energy (BLE) for the Internet of Things (IoT). The ASR5822S integrates RF transceiver, 802.11 PHY+MAC, BLE PHY+MAC, Arm China STAR-MC1 Processor, advanced peripheral interfaces, Real Time Counter (RTC) and power management circuits. The integrated RF and analog circuit incorporate T/R switch, RF balun, power amplifier, low-noise amplifier, and entire power management modules. Therefore, the ASR5822S provides a small form-factor solution with minimal external components for the IoT applications, such as smart lighting, security, remote control, appliances and more.
 

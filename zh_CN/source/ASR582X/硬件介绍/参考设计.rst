@@ -1,0 +1,27 @@
+ASR582X 系列 EVB 参考设计 
+====================
+
+
+ASR582X EVB 参考设计
+--------------------------------------------------------
+
+.. figure:: ../../img/582X_参考设计/图1-1.png
+    :align: center
+    :scale: 30%
+    :alt: ASR582X 3.3V EVB 参考设计（点击放大）
+
+    ASR582X 3.3V EVB 参考设计（点击放大）
+
+
+.. figure:: ../../img/582X_参考设计/图1-2.png
+    :align: center
+    :scale: 30%
+    :alt: ASR582X 5V EVB 参考设计（点击放大）
+
+    ASR582X 5V EVB 参考设计（点击放大）
+
+
+
+
+.. |image1| image:: ../../img/582X_参考设计/图1-1.png
+.. |image2| image:: ../../img/582X_参考设计/图1-2.png

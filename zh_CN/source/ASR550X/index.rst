@@ -77,6 +77,19 @@ ASR550X
 
 .. toctree::
    :hidden:
+   :caption: ASR582X
+   
+   ASR582X/芯片规格/index
+   ASR582X/硬件介绍/index
+   ASR582X/烧录工具介绍/index
+   ASR582X/演示工程/index
+   ASR582X/软件快速入门/index
+   ASR582X/常见问题/index
+   ASR582X/认证/index
+   ASR582X/测试报告/index
+
+.. toctree::
+   :hidden:
    :caption: ASR6601
 
    ASR6601/芯片规格/index

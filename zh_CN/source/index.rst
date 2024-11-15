@@ -39,6 +39,18 @@ BT/BLE 芯片
 .. _ASR560X SoC: ASR560X/index.html
 
 
+Combo 芯片
+--------------------------------
+
+.. list-table::
+
+    *   -   |ASR582X SoC|_
+    *   -   `ASR582X SoC`_ 
+
+.. |ASR582X SoC| image:: img/12.png
+.. _ASR582X SoC: ASR582X/index.html
+
+
 LPWAN 芯片
 --------------------------------
 
@@ -82,6 +94,19 @@ LPWAN 芯片
    ASR560X/常见问题/index
    ASR560X/认证/index
    ASR560X/测试报告/index
+
+.. toctree::
+   :hidden:
+   :caption: ASR582X
+   
+   ASR582X/芯片规格/index
+   ASR582X/硬件介绍/index
+   ASR582X/烧录工具介绍/index
+   ASR582X/演示工程/index
+   ASR582X/软件快速入门/index
+   ASR582X/常见问题/index
+   ASR582X/认证/index
+   ASR582X/测试报告/index
 
 .. toctree::
    :hidden:

@@ -1,8 +1,8 @@
-ASR6601
+ASR550X
 =======================
-`English <https://asriot.readthedocs.io/en/latest/ASR6601/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR550X/index.html>`_
 
-这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 6601 系列产品的文档。
+这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 550X 系列产品的文档。您也可以点击 `550X系列文档 <https://pan.baidu.com/s/1XBFzIGlL3JBv_grDdmBE-w?pwd=95af>`_ 下载PDF版资料。     
 
 ==================  ==================  ==================
 |芯片规格|_         |硬件介绍|_           |烧录工具介绍|_
@@ -13,9 +13,9 @@ ASR6601
 ------------------  ------------------  ------------------
 `演示工程`_         `软件快速入门`_         `常见问题`_
 ------------------  ------------------  ------------------ 
-|认证|_                |测试报告|_      
+|认证|_                |测试报告|_  
 ------------------  ------------------  ------------------ 
-`认证`_                `测试报告`_   
+`认证`_                `测试报告`_ 
 ==================  ==================  ==================
 
 .. |芯片规格| image:: ../img/03.png
@@ -47,7 +47,7 @@ ASR6601
    :hidden:
    :caption: 语言
    
-   English <https://asriot.readthedocs.io/en/latest/ASR6601/index.html>
+   English <https://asriot.readthedocs.io/en/latest/ASR550X/index.html>
 
 .. toctree::
    :hidden:

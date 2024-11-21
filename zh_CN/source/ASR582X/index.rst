@@ -1,8 +1,8 @@
-ASR550X
+ASR582X
 =======================
-`English <https://asriot.readthedocs.io/en/latest/ASR550X/index.html>`_
+`English <https://asriot.readthedocs.io/en/latest/ASR582X/index.html>`_
 
-这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 550X 系列产品的文档。您也可以点击 `550X系列文档 <https://pan.baidu.com/s/1XBFzIGlL3JBv_grDdmBE-w?pwd=95af>`_ 下载PDF版资料。     
+这些是 `ASR <http://www.asrmicro.com/index>`_ IoT 582X 系列产品的文档。     
 
 ==================  ==================  ==================
 |芯片规格|_         |硬件介绍|_           |烧录工具介绍|_
@@ -47,7 +47,7 @@ ASR550X
    :hidden:
    :caption: 语言
    
-   English <https://asriot.readthedocs.io/en/latest/ASR550X/index.html>
+   English <https://asriot.readthedocs.io/en/latest/ASR582X/index.html>
 
 .. toctree::
    :hidden:

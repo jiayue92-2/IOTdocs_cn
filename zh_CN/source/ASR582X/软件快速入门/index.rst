@@ -16,7 +16,6 @@ ASR582X 软件快速入门
     ASR582X系列 FreeRTOS平台_公有云用户手册<https://pan.baidu.com/s/13Ncg_CwcaCCeVNGfoi94HA?pwd=8ovu>
     ASR582X系列 FreeRTOS平台_私有云用户手册<https://pan.baidu.com/s/1_mbLRL8Nb6WxNTZJo2lIeQ?pwd=6x8g>
     ASR582X系列 OpenHarmony开发手册<https://pan.baidu.com/s/1tsXg2VMpCw2V7XBZJMwRHA?pwd=cey3>
-    ASR582X系列 RCO校准参考手册<https://pan.baidu.com/s/1zIFPDFKkMB9l1vW-JV1K8Q?pwd=pr3q>
     ASR5822X系列 FreeRTOS平台SDK编译说明<https://pan.baidu.com/s/19sZdnK9M7sC7wuAKI2RlWQ?pwd=4bbg>
     ASR582X Series Peripheral Application Notes<https://pan.baidu.com/s/1wOx8mUtsjDmwrVdM8j_ptA?pwd=uggc>
     ASR550X 和 ASR582X 系列 私有云认证说明<ASR582X系列_私有云认证说明>
